@@ -9,12 +9,12 @@ package silo;
  *
  * @author putrinatih
  */
-public class DeliveryNoteForm extends javax.swing.JPanel {
+public class DaftarItemCtl extends javax.swing.JPanel {
 
     /**
-     * Creates new form DeliveryNoteForm
+     * Creates new form DaftarItemCtl
      */
-    public DeliveryNoteForm() {
+    public DaftarItemCtl() {
         initComponents();
     }
 

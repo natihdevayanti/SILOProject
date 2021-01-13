@@ -5,7 +5,6 @@
  */
 package silo;
 
-import Koneksi.DBHandler;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.util.ArrayList;

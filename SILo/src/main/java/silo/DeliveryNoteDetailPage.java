@@ -9,12 +9,12 @@ package silo;
  *
  * @author putrinatih
  */
-public class CreateDeliveryNote extends javax.swing.JPanel {
+public class DeliveryNoteDetailPage extends javax.swing.JPanel {
 
     /**
-     * Creates new form CreateDeliveryNote
+     * Creates new form DeliveryNoteDetailPage
      */
-    public CreateDeliveryNote() {
+    public DeliveryNoteDetailPage() {
         initComponents();
     }
 
