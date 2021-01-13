@@ -122,7 +122,7 @@ public class DBHandler {
         //insert item data to database
         items.add(new Item(id,barcode,description, manufacturer, title, url, stock));
         try{
-            FileWriter writer = new FileWriter("ItemData.txt");
+            FileWriter writer = new FileWriter("ItemDB.txt");
             for(int i=0; i<items.size(); i++){
                 Item temp = items.get(i);
                 writer.write(
@@ -155,7 +155,7 @@ public class DBHandler {
         items.get(index).setNumberOfStock(stock);
         
         try{
-            FileWriter writer = new FileWriter("ItemData.txt");
+            FileWriter writer = new FileWriter("ItemDB.txt");
             for(int i=0; i<items.size(); i++){
                 Item temp = items.get(i);
                 writer.write(
@@ -178,7 +178,7 @@ public class DBHandler {
         //insert delivery note data to database
         deliveryNotes.add(new DeliveryNote(Integer.parseInt(invoiceNumber), Integer.parseInt(deliveryNoteNumber), CustomerName, formatter.parse(orderDate), formatter.parse(deliveryDate), status));
         try{
-            FileWriter writer = new FileWriter("DeliveryNoteData.txt");
+            FileWriter writer = new FileWriter("DeliveryNoteDB.txt");
             for(int i=0; i<deliveryNotes.size(); i++){
                 DeliveryNote temp = deliveryNotes.get(i);
                 writer.write(
@@ -207,7 +207,7 @@ public class DBHandler {
         }
         
         try{
-            FileWriter deliveryNoteDbWriter = new FileWriter("DeliveryNoteData.txt");
+            FileWriter deliveryNoteDbWriter = new FileWriter("DeliveryNoteDB.txt");
             
             for(int i=0; i<deliveryNotes.size(); i++){
                 DeliveryNote temp = deliveryNotes.get(i);
@@ -236,7 +236,7 @@ public class DBHandler {
         }
         
         try{
-            FileWriter invoiceDbWriter = new FileWriter("InvoiceData.txt");
+            FileWriter invoiceDbWriter = new FileWriter("InvoiceDB.txt");
             
             for(int i=0; i<invoices.size(); i++){
                 Invoice temp = invoices.get(i);
