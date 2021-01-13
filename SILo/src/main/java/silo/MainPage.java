@@ -108,7 +108,8 @@ public class MainPage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 153, 153));
-        setPreferredSize(new java.awt.Dimension(400, 300));
+
+        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
 
         listItem.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -218,6 +219,8 @@ public class MainPage extends javax.swing.JFrame {
                     .addContainerGap(46, Short.MAX_VALUE)))
         );
 
+        jPanel2.setBackground(new java.awt.Color(204, 204, 0));
+
         listInvoice.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -282,6 +285,8 @@ public class MainPage extends javax.swing.JFrame {
                     .addComponent(invoiceViewBtnHolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(40, Short.MAX_VALUE)))
         );
+
+        jPanel3.setBackground(new java.awt.Color(0, 153, 153));
 
         listDeliveryNote.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
