@@ -88,8 +88,8 @@ public class MainPage extends javax.swing.JFrame {
             cardPanel.remove(lastNewItemForm);
         }
         lastNewItemForm = new NewItemForm(this);
-        cardPanel.add(lastNewItemForm, "Detail SJ");
-        cardLayout.show(cardPanel, "Detail SJ");
+        cardPanel.add(lastNewItemForm, "Delivery Note Detail");
+        cardLayout.show(cardPanel, "Delivery Note Detail");
     }
     
     public void failsToCreateNewItem() {
