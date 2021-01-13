@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package silo;
+package Koneksi;
 import java.util.Date;
 
 /**
@@ -18,7 +18,7 @@ public class Invoice {
     public Date invoiceDeliveryDate;
     public String invoiceStatus;
     
-    public void changeInvoiceStatus(int status){
+    public void changeInvoiceStatus(String status){
         this.invoiceStatus = status;
     }
     
