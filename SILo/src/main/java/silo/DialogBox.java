@@ -42,6 +42,7 @@ public class DialogBox extends javax.swing.JPanel {
 
         DialogBoxLabel2.setText("Do you want to re-enter the data?");
 
+        cancelButton.setBackground(new java.awt.Color(255, 102, 204));
         cancelButton.setText("Cancel");
         cancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
