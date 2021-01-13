@@ -18,8 +18,6 @@ public class Item {
     private String url;
     private int numberOfStock;
    
-   
-    
     public Item(String[] row) {
         this(
                 row[0],
@@ -39,7 +37,7 @@ public class Item {
                 + "Desciption: " + description + "\n"
                 + "Manufacturer: " + manufacturer + "\n"
                 + "URL: " + url + "\n"
-                + "Stock: " + numberOfStock + "\n";
+                + "Stocks: " + numberOfStock + "\n";
         return res;
     }
     
@@ -65,7 +63,7 @@ public class Item {
         this.description = description;
         this.manufacturer = manufacturer;
         this.url = url;
-        this.numberOfStock = numberOfStock;
+        this.numberOfStock = Integer.parseInt(numberOfStock);
     }
     
        public Vector<String> toVector() {

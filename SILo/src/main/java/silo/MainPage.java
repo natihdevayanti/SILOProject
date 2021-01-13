@@ -5,6 +5,9 @@
  */
 package silo;
 
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+
 /**
  *
  * @author ASUS
@@ -14,6 +17,18 @@ public class MainPage extends javax.swing.JFrame {
     /**
      * Creates new form MainPage
      */
+    private DBHandler dbHandler;
+    private ItemCtl itemCtl;
+     private SJCtl sjCtl;
+    private SPCtl spCtl;
+    private CardLayout cardLayout = new CardLayout();
+    private JPanel cardPanel;
+    private ItemList daftarItem;
+    private ItemBaruForm lastItemBaruForm;
+    private EditItemForm lastEditItemForm;
+   
+    
+    
     public MainPage() {
         initComponents();
     }

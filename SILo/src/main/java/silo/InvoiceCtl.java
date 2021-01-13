@@ -7,8 +7,8 @@ package silo;
 
 /**
  *
- * @author ASUS
+ * @author putrinatih
  */
-public class Form {
+public class InvoiceCtl {
     
 }

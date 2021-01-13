@@ -7,10 +7,8 @@ package silo;
 
 /**
  *
- * @author ASUS
+ * @author putrinatih
  */
-public class Customer {
-    private int customerID;
-    private String customerName;
-    private String customerEmailAddress;
+public class DeliveryNoteCtl {
+    
 }
