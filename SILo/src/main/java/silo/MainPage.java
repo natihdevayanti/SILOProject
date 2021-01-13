@@ -28,7 +28,7 @@ public class MainPage extends javax.swing.JFrame {
     private ItemList itemList;
     private DeliveryNoteList deliveryNoteList;
      private InvoiceList invoiceList;
-    private NewItemForm lastNewItemForm;
+    private NewItemForm lastItemBaruForm;
     private EditItemForm lastEditItemForm;
    
     
