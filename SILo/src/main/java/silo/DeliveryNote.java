@@ -5,34 +5,87 @@
  */
 package silo;
 import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 /**
  *
  * @author ASUS
  */
     public class DeliveryNote {
-    public String invoiceNumber;
-    public String deliveryNoteNumber;
+    public int invoiceNumber;
+    public int deliveryNoteNumber;
     public String customerName;
-    public String customerEmail;
-    private Date deliveryNoteOrderDate;
-    private Date deliveryNoteDeliveryDate;
+    Date orderDate = new Date();
+    Date deliveryDate = new Date();
     private String deliveryNoteStatus;
+    
+    SimpleDateFormat formatter;
 
-    public void changeDeliveryNoteStatus(String status){
+    public DeliveryNote(int invoiceNumber, int deliveryNoteNumber, String customerName, Date orderDate, Date deliveryDate, String status) throws ParseException{
+        this.invoiceNumber = invoiceNumber;
+        this.deliveryNoteNumber = deliveryNoteNumber;
+        this.customerName = customerName;
+        formatter =new SimpleDateFormat("dd-MMM-yyyy"); 
+        this.orderDate = orderDate;
+        this.deliveryDate = deliveryDate;
         this.deliveryNoteStatus = status;
     }
     
-    public void setDeliverNoteDeliveryDate(Date deliveryDate){
-        this.deliveryNoteDeliveryDate = deliveryDate;
+    public int getInvoiceNumber() {
+        return invoiceNumber;
+    }
+
+    public int getDeliveryNoteNumber() {
+        return deliveryNoteNumber;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public Date getDeliveryDate() {
+        return deliveryDate;
+    }
+
+    public String getStatus() {
+        return deliveryNoteStatus;
+    }
+
+    public void setInvoiceNumber(int invoiceNumber) {
+        this.invoiceNumber = invoiceNumber;
+    }
+
+    public void setDeliveryNoteNumber(int deliveryNoteNumber) {
+        this.deliveryNoteNumber = deliveryNoteNumber;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
+    }
+
+    public void setDeliveryDate(Date deliveryDate) {
+        this.deliveryDate = deliveryDate;
+    }
+
+    public void setStatus(String status) {
+        this.deliveryNoteStatus = status;
     }
     
-    public void showDeliveryNote(){
-        System.out.println("Delivery Note Number:" + this.deliveryNoteNumber);
-        System.out.println("Order Date          :" + this.deliveryNoteNumber);
-        System.out.println("Delivery Date       :" + this.deliveryNoteNumber);
-        System.out.println("Status              :" + this.deliveryNoteNumber);
-        
+    public String getOrderDateString() {
+        return formatter.format(orderDate);
+    }
+
+    public String getDeliveryDateString() {
+        return formatter.format(deliveryDate);
     }
     
     

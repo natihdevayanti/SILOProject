@@ -10,7 +10,7 @@ import java.util.Vector;
  * @author ASUS
  */
 public class Item {
-    public int itemId;
+    public String itemId;
     private String barcode;
     private String title;
     private String description;
@@ -29,22 +29,12 @@ public class Item {
                 row[6]
         );
     }
-    
-    public String toString() {
-        String res = "ID: " + itemId + "\n"
-                + "Barcode: " + barcode + "\n"
-                + "Title: " + title + "\n"
-                + "Desciption: " + description + "\n"
-                + "Manufacturer: " + manufacturer + "\n"
-                + "URL: " + url + "\n"
-                + "Stocks: " + numberOfStock + "\n";
-        return res;
-    }
+
     
  //konstruksi item dari fields yg ada
     public Item(String id ,String barcode, String title, String description, String manufacturer, String url,String numberOfStock){
         //Item newItem = new Item();
-        this.itemId =  Integer.parseInt(id);
+        this.itemId =  itemId;
         this.barcode = barcode;
         this.title = title;
         this.description = description;
@@ -55,35 +45,59 @@ public class Item {
         //return newItem;
     }
    
-    //buat item baru
-    public Item(String barcode, String title, String description, String manufacturer, String url,String numberOfStock){
-       // this.itemId = id;
+    public String getId() {
+        return itemId;
+    }
+
+    public String getBarcode() {
+        return barcode;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public String getURL() {
+        return URL;
+    }  
+    
+    public String getDescription() {
+        return description;
+    }
+    
+    public int getNumberOfStock() {
+        return numberOfStock;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setBarcode(String barcode) {
         this.barcode = barcode;
+    }
+
+    public void setTitle(String title) {
         this.title = title;
+    }
+
+    public void setDescription(String description) {
         this.description = description;
+    }
+
+    public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
-        this.url = url;
-        this.numberOfStock = Integer.parseInt(numberOfStock);
     }
-    
-       public Vector<String> toVector() {
-        Vector<String> current = new Vector<>();
-        current.add(String.valueOf(this.itemId));
-        current.add(this.barcode);
-        current.add(this.title);
-        current.add(this.description);
-        current.add(this.manufacturer);
-        current.add(this.url);
-        current.add(String.valueOf(this.numberOfStock));
-        return current;
+
+    public void setURL(String URL) {
+        this.URL = URL;
     }
-    
-    //    public void setStock(int stock){
-//        this.numberOfStock = stock;
-//    }
-//    
-//    public void editItemDescription(String desc){
-//        this.description = desc;
-//    }
-//    
+
+    public void setNumberOfStock(int numberOfStock) {
+        this.numberOfStock = numberOfStock;
+    }
 }

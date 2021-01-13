@@ -5,17 +5,25 @@
  */
 package silo;
 
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+//import silo.DeliveryNoteForm;
 /**
  *
- * @author putrinatih
+ * @author ASUS
  */
-public class ConfirmationMessage extends javax.swing.JPanel {
+public class ConfirmationMessage extends javax.swing.JFrame {
+
+    private DeliveryNoteForm deliveryNoteForm;
 
     /**
      * Creates new form ConfirmationMessage
      */
-    public ConfirmationMessage() {
+    public ConfirmationMessage(DeliveryNoteForm deliveryNoteForm) {
         initComponents();
+        
+        this.deliveryNoteForm = deliveryNoteForm;
     }
 
     /**
@@ -27,50 +35,61 @@ public class ConfirmationMessage extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        confirmationMessageLabel = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         okButton = new javax.swing.JButton();
 
-        confirmationMessageLabel.setText("Confirm?");
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        okButton.setText("Ok");
-        okButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                okButtonActionPerformed(evt);
+        jLabel1.setText("Confirm?");
+
+        okButton.setText("OK");
+        okButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                okButtonMouseClicked(evt);
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(168, 168, 168)
-                        .addComponent(confirmationMessageLabel))
+                        .addGap(151, 151, 151)
+                        .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(160, 160, 160)
-                        .addComponent(okButton)))
-                .addContainerGap(165, Short.MAX_VALUE))
+                        .addGap(161, 161, 161)
+                        .addComponent(jLabel1)))
+                .addContainerGap(176, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(97, 97, 97)
-                .addComponent(confirmationMessageLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addGap(90, 90, 90)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
                 .addComponent(okButton)
-                .addGap(76, 76, 76))
+                .addGap(46, 46, 46))
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_okButtonActionPerformed
+    private void okButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_okButtonMouseClicked
+        try {
+            deliveryNoteForm.confirm();
+        } catch (ParseException ex) {
+            Logger.getLogger(ConfirmationMessage.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_okButtonMouseClicked
 
+    /**
+     * @param args the command line arguments
+     */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel confirmationMessageLabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton okButton;
     // End of variables declaration//GEN-END:variables
 }
