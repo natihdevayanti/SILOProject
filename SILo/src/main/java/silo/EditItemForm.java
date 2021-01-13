@@ -184,6 +184,7 @@ public class EditItemForm extends javax.swing.JPanel {
             || numberOfStocksTF.getText().trim().isEmpty()) {
             mainPage.failsToCreateNewItem();
             return;
+            
         }
 
         String[] input = {
