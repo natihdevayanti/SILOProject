@@ -5,6 +5,7 @@
  */
 package silo;
 
+import Koneksi.DBHandler;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.util.ArrayList;
@@ -67,59 +68,59 @@ public class MainPage extends javax.swing.JFrame {
 
     // Start routes
     public void showItemList() {
-        itemList.refresh();
+//        itemList.refresh();
         cardLayout.show(cardPanel, "Daftar Item");
     }
 
-    public ArrayList<Item> getItems() {
-        return itemCtl.getItems();
-    }
-
-    public ArrayList<Item> searchItem(String keyword) {
-        return itemCtl.searchItem(keyword);
-    }
+//    public ArrayList<Item> getItems() {
+////        return itemCtl.getItems();
+//    }
+//
+//    public ArrayList<Item> searchItem(String keyword) {
+////        return itemCtl.searchItem(keyword);
+//    }
 
     public void onShowNewItemForm() {
-        itemCtl.showNewItemForm();
+//        itemCtl.showNewItemForm();
     }
 
-    public void showNewItemForm() {
-        if (lastNewItemForm != null) {
-            cardPanel.remove(lastNewItemForm);
-        }
-        lastNewItemForm = new NewItemForm(this);
-        cardPanel.add(lastNewItemForm, "Delivery Note Detail");
-        cardLayout.show(cardPanel, "Delivery Note Detail");
-    }
-    
-    public void failsToCreateNewItem() {
-        itemCtl.showFailsToCreateNewItemDialog();
-    }
-    
-    public void saveNewItem(String[] input) {
-        itemCtl.saveNewItem(input);
+//    public void showNewItemForm() {
+//        if (lastNewItemForm != null) {
+//            cardPanel.remove(lastNewItemForm);
+//        }
+//        lastNewItemForm = new NewItemForm(this);
+//        cardPanel.add(lastNewItemForm, "Delivery Note Detail");
+//        cardLayout.show(cardPanel, "Delivery Note Detail");
+//    }
+//    
+//    public void failsToCreateNewItem() {
+//        itemCtl.showFailsToCreateNewItemDialog();
+//    }
+//    
+//    public void saveNewItem(String[] input) {
+//        itemCtl.saveNewItem(input);
+//
+//        this.showItemList();
+//    }
 
-        this.showItemList();
-    }
+//    public void onShowEditItemForm(Item curItem) {
+//        itemCtl.showEditItemForm(curItem);
+//    }
 
-    public void onShowEditItemForm(Item curItem) {
-        itemCtl.showEditItemForm(curItem);
-    }
+//    public void showEditItemForm(Item curItem) {
+//        if (lastEditItemForm != null) {
+//            cardPanel.remove(lastEditItemForm);
+//        }
+//        lastEditItemForm = new EditItemForm(this, curItem);
+//        cardPanel.add(lastEditItemForm, "Detail SJ");
+//        cardLayout.show(cardPanel, "Detail SJ");
+//    }
 
-    public void showEditItemForm(Item curItem) {
-        if (lastEditItemForm != null) {
-            cardPanel.remove(lastEditItemForm);
-        }
-        lastEditItemForm = new EditItemForm(this, curItem);
-        cardPanel.add(lastEditItemForm, "Detail SJ");
-        cardLayout.show(cardPanel, "Detail SJ");
-    }
-
-    public void saveEditedItem(String[] input) {
-        itemCtl.saveEditedItem(input);
-
-        this.showItemList();
-    }
+//    public void saveEditedItem(String[] input) {
+//        itemCtl.saveEditedItem(input);
+//
+//        this.showItemList();
+//    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -183,6 +184,11 @@ public class MainPage extends javax.swing.JFrame {
         );
 
         jMenu1.setText("Create Delivery Note");
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Delivery Note");
@@ -209,6 +215,11 @@ public class MainPage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jMenu1ActionPerformed
 
     /**
      * @param args the command line arguments

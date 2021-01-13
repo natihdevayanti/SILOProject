@@ -19,7 +19,7 @@ import java.util.Date;
     private Date deliveryNoteDeliveryDate;
     private String deliveryNoteStatus;
 
-    public void changeDeliveryNoteStatus(int status){
+    public void changeDeliveryNoteStatus(String status){
         this.deliveryNoteStatus = status;
     }
     
