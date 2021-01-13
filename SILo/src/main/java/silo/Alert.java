@@ -5,19 +5,39 @@
  */
 package silo;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  *
  * @author putrinatih
  */
 public class Alert extends javax.swing.JPanel {
-
+ private int timeLimit;
     /**
      * Creates new form Alert
      */
-    public Alert() {
+    public Alert(int _timeLimit) {
         initComponents();
+                this.setVisible(false);
+        timeLimit = _timeLimit;
+        
+        Timer timer = new Timer();
+        TimerTask task = new TimerTask(){
+            public void run(){
+                timeLimit--;
+                if(timeLimit<=0){
+                    closeAlert();
+                    timer.cancel();
+                }
+            }
+        };
+         timer.scheduleAtFixedRate(task, 0,1000);
     }
 
+        private void closeAlert(){
+        this.setVisible(false);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

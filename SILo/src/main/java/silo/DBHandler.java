@@ -5,7 +5,6 @@
  */
 package silo;
 
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -16,11 +15,13 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
+
 /**
  *
- * @author putrinatih
+ * @author feral
  */
 public class DBHandler {
+
     private List<Item> items;
     private List<Invoice> invoices;
     private List<DeliveryNote> deliveryNotes;
@@ -37,7 +38,7 @@ public class DBHandler {
     public void createItemData(){
         items = new ArrayList<Item>();
         try{
-            File itemDb = new File("Item.txt");
+            File itemDb = new File("ItemData.txt");
             Scanner scanner = new Scanner(itemDb);
             while(scanner.hasNextLine()){
                 String data = scanner.nextLine();
@@ -51,7 +52,7 @@ public class DBHandler {
     public void createInvoiceData(){
         invoices = new ArrayList<Invoice>();
         try{
-            File invoiceDb = new File("Invoice.txt");
+            File invoiceDb = new File("InvoiceData.txt");
             Scanner scanner = new Scanner(invoiceDb);
             while(scanner.hasNextLine()){
                 String data = scanner.nextLine();
@@ -73,7 +74,7 @@ public class DBHandler {
     public void createDeliveryNoteData() throws ParseException{
         deliveryNotes = new ArrayList<DeliveryNote>();
         try{
-            File dnDb = new File("DeliveryNote.txt");
+            File dnDb = new File("DeliveryNoteData.txt");
             Scanner scanner = new Scanner(dnDb);
             while(scanner.hasNextLine()){
                 String data = scanner.nextLine();
@@ -92,7 +93,7 @@ public class DBHandler {
         } catch(FileNotFoundException e){}
     }
     
-     public List<DeliveryNote> getListDeliveryNote(){
+    public List<DeliveryNote> getListDeliveryNote(){
         return deliveryNotes;
     }
     
@@ -121,7 +122,7 @@ public class DBHandler {
         //insert item data to database
         items.add(new Item(id,barcode,description, manufacturer, title, url, stock));
         try{
-            FileWriter writer = new FileWriter("Item.txt");
+            FileWriter writer = new FileWriter("ItemData.txt");
             for(int i=0; i<items.size(); i++){
                 Item temp = items.get(i);
                 writer.write(
@@ -154,7 +155,7 @@ public class DBHandler {
         items.get(index).setNumberOfStock(stock);
         
         try{
-            FileWriter writer = new FileWriter("Item.txt");
+            FileWriter writer = new FileWriter("ItemData.txt");
             for(int i=0; i<items.size(); i++){
                 Item temp = items.get(i);
                 writer.write(
@@ -177,7 +178,7 @@ public class DBHandler {
         //insert delivery note data to database
         deliveryNotes.add(new DeliveryNote(Integer.parseInt(invoiceNumber), Integer.parseInt(deliveryNoteNumber), CustomerName, formatter.parse(orderDate), formatter.parse(deliveryDate), status));
         try{
-            FileWriter writer = new FileWriter("DeliveryNote.txt");
+            FileWriter writer = new FileWriter("DeliveryNoteData.txt");
             for(int i=0; i<deliveryNotes.size(); i++){
                 DeliveryNote temp = deliveryNotes.get(i);
                 writer.write(
@@ -206,7 +207,7 @@ public class DBHandler {
         }
         
         try{
-            FileWriter deliveryNoteDbWriter = new FileWriter("DeliveryNote.txt");
+            FileWriter deliveryNoteDbWriter = new FileWriter("DeliveryNoteData.txt");
             
             for(int i=0; i<deliveryNotes.size(); i++){
                 DeliveryNote temp = deliveryNotes.get(i);
@@ -235,7 +236,7 @@ public class DBHandler {
         }
         
         try{
-            FileWriter invoiceDbWriter = new FileWriter("Invoice.txt");
+            FileWriter invoiceDbWriter = new FileWriter("InvoiceData.txt");
             
             for(int i=0; i<invoices.size(); i++){
                 Invoice temp = invoices.get(i);
@@ -256,7 +257,6 @@ public class DBHandler {
     
     public String[] getInvoiceDescriptionDB() {
         return null;
-
     }
 
     List<Invoice> getListInvoice() {

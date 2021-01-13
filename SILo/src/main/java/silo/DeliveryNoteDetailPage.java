@@ -7,15 +7,20 @@ package silo;
 
 /**
  *
- * @author putrinatih
+ * @author VincentT
  */
-public class DeliveryNoteDetailPage extends javax.swing.JPanel {
+public class DeliveryNoteDetailPage extends javax.swing.JFrame {
 
     /**
      * Creates new form DeliveryNoteDetailPage
      */
+    //public DBHandler dbHandler;
+    
     public DeliveryNoteDetailPage() {
         initComponents();
+        
+        sendingForm = new SendingForm(this);
+        printDialog = new PrintDialog(this);
     }
 
     /**
@@ -45,6 +50,8 @@ public class DeliveryNoteDetailPage extends javax.swing.JPanel {
         deliveryDateLbl = new javax.swing.JLabel();
         statusLbl = new javax.swing.JLabel();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
         jLabel1.setText("invoice number :");
 
         emailBtn.setText("Email");
@@ -65,11 +72,6 @@ public class DeliveryNoteDetailPage extends javax.swing.JPanel {
         preparingBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 preparingBtnMouseClicked(evt);
-            }
-        });
-        preparingBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                preparingBtnActionPerformed(evt);
             }
         });
 
@@ -105,28 +107,24 @@ public class DeliveryNoteDetailPage extends javax.swing.JPanel {
 
         statusLbl.setText("jLabel7");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(pendingBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(printBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(emailBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(34, 34, 34))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(signBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(preparingBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(pendingBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(preparingBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(signBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(printBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(emailBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(34, 34, 34))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
@@ -183,27 +181,33 @@ public class DeliveryNoteDetailPage extends javax.swing.JPanel {
                     .addComponent(jLabel6)
                     .addComponent(statusLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pendingBtn)
-                    .addComponent(signBtn)
-                    .addComponent(preparingBtn))
+                .addComponent(pendingBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(emailBtn)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(signBtn)
+                    .addComponent(emailBtn))
                 .addGap(7, 7, 7)
-                .addComponent(printBtn)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(preparingBtn)
+                    .addComponent(printBtn))
                 .addGap(25, 25, 25))
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void emailBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailBtnMouseClicked
         sendingForm.setVisible(true); //show sending form
-        sendingForm.setSendingForm( invoiceNumberLbl.getText(), deliveryDateLbl.getText(), customerNameLbl.getText()
-            ,orderDateLbl.getText(), deliveryDateLbl.getText(), statusLbl.getText());
+        sendingForm.setSendingForm(invoiceNumberLbl.getText(), deliveryDateLbl.getText(), customerNameLbl.getText(),orderDateLbl.getText(), deliveryDateLbl.getText(), statusLbl.getText());
     }//GEN-LAST:event_emailBtnMouseClicked
 
     private void printBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_printBtnMouseClicked
         printDialog.setVisible(true);
     }//GEN-LAST:event_printBtnMouseClicked
+
+    private void pendingBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pendingBtnMouseClicked
+        deliveryNoteCtl.requestChangeStatus("pending", deliveryNoteNumberLbl.getText());
+    }//GEN-LAST:event_pendingBtnMouseClicked
 
     private void preparingBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_preparingBtnMouseClicked
         deliveryNoteCtl.requestChangeStatus("preparing", deliveryNoteNumberLbl.getText());
@@ -213,18 +217,41 @@ public class DeliveryNoteDetailPage extends javax.swing.JPanel {
         deliveryNoteCtl.requestChangeStatus("completed", deliveryNoteNumberLbl.getText());
     }//GEN-LAST:event_signBtnMouseClicked
 
-    private void pendingBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pendingBtnMouseClicked
-        deliveryNoteCtl.requestChangeStatus("pending", deliveryNoteNumberLbl.getText());
-    }//GEN-LAST:event_pendingBtnMouseClicked
+    /**
+     * @param args the command line arguments
+     */
 
-    private void preparingBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_preparingBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_preparingBtnActionPerformed
+
+    public void setController(DeliveryNoteCtl deliveryNoteCtl){
+        this.deliveryNoteCtl = deliveryNoteCtl;
+    }
+    
+    public void sendSoftCopyDone(){
+        //berhasil dikirim
+        sendingForm.setVisible(false);
+        deliveryNoteCtl.sendSoftCopyDone();
+    }
+    
+    public void requestPrint(){
+        printDialog.setVisible(false);
+        
+        deliveryNoteCtl.requestPrint();
+        
+    }
+    
+    public void setCurrentDeliveryNote(DeliveryNote dn){
+        invoiceNumberLbl.setText(String.valueOf(dn.getInvoiceNumber()));
+        deliveryNoteNumberLbl.setText(String.valueOf(dn.getDeliveryNoteNumber()));
+        customerNameLbl.setText(dn.getCustomerName());
+        orderDateLbl.setText(dn.getOrderDateString());
+        deliveryDateLbl.setText(dn.getDeliveryDateString());
+        statusLbl.setText(dn.getStatus());
+    }
     
     private DeliveryNoteCtl deliveryNoteCtl;
     private SendingForm sendingForm;
     private PrintDialog printDialog;
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel customerNameLbl;
     private javax.swing.JLabel deliveryDateLbl;

@@ -14,8 +14,13 @@ public class DialogBox extends javax.swing.JPanel {
     /**
      * Creates new form DialogBox
      */
-    public DialogBox() {
+    
+     ItemForm addNewItemForm;
+     
+    public DialogBox(ItemForm addNewItemForm) {
         initComponents();
+        
+         this.addNewItemForm = addNewItemForm;
     }
 
     /**
@@ -27,19 +32,68 @@ public class DialogBox extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        DialogBoxLabel = new javax.swing.JLabel();
+        DialogBoxLabel2 = new javax.swing.JLabel();
+        cancelButton = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(255, 153, 204));
+
+        DialogBoxLabel.setText("Oh no! There is an empty space!");
+
+        DialogBoxLabel2.setText("Do you want to re-enter the data?");
+
+        cancelButton.setText("Cancel");
+        cancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cancelButtonMouseClicked(evt);
+            }
+        });
+        cancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(94, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(DialogBoxLabel2)
+                    .addComponent(DialogBoxLabel))
+                .addGap(94, 94, 94))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(cancelButton)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(111, 111, 111)
+                .addComponent(DialogBoxLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(DialogBoxLabel2)
+                .addGap(27, 27, 27)
+                .addComponent(cancelButton)
+                .addContainerGap(95, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cancelButtonActionPerformed
+
+    private void cancelButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cancelButtonMouseClicked
+          addNewItemForm.cancelAddNewItem();
+    }//GEN-LAST:event_cancelButtonMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel DialogBoxLabel;
+    private javax.swing.JLabel DialogBoxLabel2;
+    private javax.swing.JButton cancelButton;
     // End of variables declaration//GEN-END:variables
 }

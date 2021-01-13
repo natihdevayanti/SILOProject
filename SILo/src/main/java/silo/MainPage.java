@@ -50,7 +50,7 @@ public class MainPage extends javax.swing.JFrame {
         deliveryNoteForm = new DeliveryNoteForm();
         addNewItemForm = new ItemForm(1);
         editItemForm = new ItemForm(2);
-        invoiceDetailPage = new DetailInvoicePage();
+        invoiceDetailPage = new InvoiceDetailPage();
         dialogBox = new DialogBox(addNewItemForm);
         
         deliveryNoteCtl = new DeliveryNoteCtl(dbHandler,this,deliveryNoteForm, deliveryNoteDetailPage);
@@ -58,7 +58,7 @@ public class MainPage extends javax.swing.JFrame {
         itemCtl = new ItemCtl(dbHandler,this,addNewItemForm, editItemForm);
         listItemCtl = new DaftarItemCtl(dbHandler,this);
         listInvoiceCtl = new DaftarInvoiceCtl(dbHandler,this);
-        invoiceCtl = new InvoiceCtl(dbHandler, this, detailInvoicePage);
+        invoiceCtl = new InvoiceCtl(dbHandler, this, invoiceDetailPage);
         
         addNewItemForm.setController(itemCtl, dialogBox);
         editItemForm.setController(itemCtl, dialogBox);

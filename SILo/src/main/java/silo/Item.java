@@ -10,41 +10,26 @@ import java.util.Vector;
  * @author ASUS
  */
 public class Item {
-    public String itemId;
+
+    private String itemId;
     private String barcode;
     private String title;
     private String description;
     private String manufacturer;
-    private String url;
+    private String URL;
     private int numberOfStock;
-   
-    public Item(String[] row) {
-        this(
-                row[0],
-                row[1],
-                row[2],
-                row[3],
-                row[4],
-                row[5],
-                row[6]
-        );
-    }
-
     
- //konstruksi item dari fields yg ada
-    public Item(String id ,String barcode, String title, String description, String manufacturer, String url,String numberOfStock){
-        //Item newItem = new Item();
-        this.itemId =  itemId;
+    public Item(String itemId, String barcode, String title, String description, String manufacturer, String URL, int numberOfStock) {
+        this.itemId = itemId;
         this.barcode = barcode;
         this.title = title;
         this.description = description;
         this.manufacturer = manufacturer;
-        this.url = url;
-        this.numberOfStock = Integer.parseInt(numberOfStock);
-        
-        //return newItem;
+        this.URL = URL;
+        this.numberOfStock = numberOfStock;
     }
-   
+
+    
     public String getId() {
         return itemId;
     }
@@ -73,8 +58,8 @@ public class Item {
         return numberOfStock;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setId(String itemId) {
+        this.itemId = itemId;
     }
 
     public void setBarcode(String barcode) {
@@ -100,4 +85,7 @@ public class Item {
     public void setNumberOfStock(int numberOfStock) {
         this.numberOfStock = numberOfStock;
     }
+    
+    
 }
+

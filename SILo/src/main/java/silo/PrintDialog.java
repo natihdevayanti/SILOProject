@@ -14,8 +14,10 @@ public class PrintDialog extends javax.swing.JPanel {
     /**
      * Creates new form PrintDialog
      */
-    public PrintDialog() {
+    public PrintDialog(DeliveryNoteDetailPage deliveryNoteDetailPage) {
         initComponents();
+        
+         this.deliveryNoteDetailPage = deliveryNoteDetailPage;
     }
 
     /**
@@ -27,19 +29,33 @@ public class PrintDialog extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        okButton = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(255, 204, 255));
+
+        okButton.setText("OK");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(149, 149, 149)
+                .addComponent(okButton)
+                .addContainerGap(176, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(195, Short.MAX_VALUE)
+                .addComponent(okButton)
+                .addGap(76, 76, 76))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+ private DeliveryNoteDetailPage deliveryNoteDetailPage;
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton okButton;
     // End of variables declaration//GEN-END:variables
 }
