@@ -111,6 +111,7 @@ public class MainPage extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
 
+        listItem.setBackground(new java.awt.Color(255, 153, 153));
         listItem.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -129,6 +130,7 @@ public class MainPage extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(listItem);
 
+        addBtn.setBackground(new java.awt.Color(255, 153, 153));
         addBtn.setText("Add Item");
         addBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -142,12 +144,14 @@ public class MainPage extends javax.swing.JFrame {
         });
         this.addBtn.setVisible(false);
 
+        searchItemTF.setBackground(new java.awt.Color(255, 204, 255));
         searchItemTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchItemTFActionPerformed(evt);
             }
         });
 
+        searchItemBtn.setBackground(new java.awt.Color(255, 153, 153));
         searchItemBtn.setText("Search Item");
         searchItemBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -160,6 +164,7 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
+        btnHolder.setBackground(new java.awt.Color(255, 204, 204));
         btnHolder.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnHolderMouseClicked(evt);
@@ -217,6 +222,7 @@ public class MainPage extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 0));
 
+        listInvoice.setBackground(new java.awt.Color(204, 204, 0));
         listInvoice.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -227,18 +233,22 @@ public class MainPage extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(listInvoice);
 
+        searchInvoiceTF.setBackground(new java.awt.Color(255, 255, 204));
         searchInvoiceTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchInvoiceTFActionPerformed(evt);
             }
         });
 
+        searchInvoiceBtn.setBackground(new java.awt.Color(204, 204, 0));
         searchInvoiceBtn.setText("Search Invoice");
         searchInvoiceBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 searchInvoiceBtnMouseClicked(evt);
             }
         });
+
+        invoiceViewBtnHolder.setBackground(new java.awt.Color(204, 204, 0));
 
         javax.swing.GroupLayout invoiceViewBtnHolderLayout = new javax.swing.GroupLayout(invoiceViewBtnHolder);
         invoiceViewBtnHolder.setLayout(invoiceViewBtnHolderLayout);
@@ -292,6 +302,7 @@ public class MainPage extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(0, 153, 153));
 
+        listDeliveryNote.setBackground(new java.awt.Color(0, 153, 153));
         listDeliveryNote.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -302,12 +313,14 @@ public class MainPage extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(listDeliveryNote);
 
+        searchDeliveryNoteTF.setBackground(new java.awt.Color(204, 255, 255));
         searchDeliveryNoteTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchDeliveryNoteTFActionPerformed(evt);
             }
         });
 
+        searchDeliveyNoteBtn.setBackground(new java.awt.Color(0, 153, 153));
         searchDeliveyNoteBtn.setText("Search Delivery Note");
         searchDeliveyNoteBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -315,7 +328,11 @@ public class MainPage extends javax.swing.JFrame {
             }
         });
 
+        viewDeliveryNoteBtn.setBackground(new java.awt.Color(0, 153, 153));
         viewDeliveryNoteBtn.setText("View");
+
+        dnEditBtnHolder.setBackground(new java.awt.Color(0, 153, 153));
+        dnEditBtnHolder.setForeground(new java.awt.Color(0, 102, 153));
 
         javax.swing.GroupLayout dnEditBtnHolderLayout = new javax.swing.GroupLayout(dnEditBtnHolder);
         dnEditBtnHolder.setLayout(dnEditBtnHolderLayout);
@@ -368,6 +385,9 @@ public class MainPage extends javax.swing.JFrame {
                     .addComponent(dnEditBtnHolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(33, Short.MAX_VALUE)))
         );
+
+        menuMB.setBackground(new java.awt.Color(204, 204, 255));
+        menuMB.setForeground(new java.awt.Color(204, 204, 255));
 
         itemMI.setText("Item");
         itemMI.addMouseListener(new java.awt.event.MouseAdapter() {
