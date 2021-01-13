@@ -79,7 +79,7 @@
                   <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
                   <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="39" max="32767" attributes="0"/>
+              <EmptySpace pref="21" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -109,21 +109,16 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="addBtn" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="369" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" alignment="1" groupAlignment="1" max="-2" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="searchItemTF" min="-2" pref="275" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="searchItemBtn" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="jScrollPane1" alignment="1" min="-2" pref="420" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace min="0" pref="84" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="420" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <Component id="addBtn" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="searchItemBtn" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="searchItemTF" min="-2" pref="241" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
@@ -141,12 +136,11 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="searchItemTF" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="searchItemBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="addBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="111" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="addBtn" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
@@ -185,7 +179,7 @@
         </Container>
         <Component class="javax.swing.JButton" name="addBtn">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Add"/>
+            <Property name="text" type="java.lang.String" value="Add Item"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="addBtnMouseClicked"/>
@@ -196,9 +190,6 @@
           </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="searchItemTF">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="search items"/>
-          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchItemTFActionPerformed"/>
           </Events>
@@ -242,15 +233,21 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <Component id="searchInvoiceTF" max="32767" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="searchInvoiceBtn" min="-2" pref="123" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
-              </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="jScrollPane2" min="-2" pref="418" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="jScrollPane2" min="-2" pref="418" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="102" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="searchInvoiceBtn" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="searchInvoiceTF" min="-2" pref="244" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
@@ -311,9 +308,9 @@
           </SubComponents>
         </Container>
         <Component class="javax.swing.JTextField" name="searchInvoiceTF">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="search invoices"/>
-          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchInvoiceTFActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="searchInvoiceBtn">
           <Properties>
@@ -353,14 +350,20 @@
               <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="searchDeliveryNoteTF" min="-2" pref="281" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
+                          <Component id="searchDeliveyNoteBtn" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="searchDeliveyNoteBtn" min="-2" pref="123" max="-2" attributes="0"/>
+                          <Component id="searchDeliveryNoteTF" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="jScrollPane3" alignment="0" min="-2" pref="422" max="-2" attributes="0"/>
-                      <Component id="viewDeliveryNoteBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jScrollPane3" alignment="0" min="-2" pref="422" max="-2" attributes="0"/>
+                              <Component id="viewDeliveryNoteBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
               </Group>
               <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
@@ -422,9 +425,6 @@
           </SubComponents>
         </Container>
         <Component class="javax.swing.JTextField" name="searchDeliveryNoteTF">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="search delivery note"/>
-          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchDeliveryNoteTFActionPerformed"/>
           </Events>

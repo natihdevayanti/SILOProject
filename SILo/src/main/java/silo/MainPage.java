@@ -129,7 +129,7 @@ public class MainPage extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(listItem);
 
-        addBtn.setText("Add");
+        addBtn.setText("Add Item");
         addBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addBtnMouseClicked(evt);
@@ -142,7 +142,6 @@ public class MainPage extends javax.swing.JFrame {
         });
         this.addBtn.setVisible(false);
 
-        searchItemTF.setText("search items");
         searchItemTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchItemTFActionPerformed(evt);
@@ -183,17 +182,15 @@ public class MainPage extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(addBtn)
-                        .addGap(369, 369, 369))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(searchItemTF, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(searchItemBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 84, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 100, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addComponent(addBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(searchItemBtn)
+                .addGap(18, 18, 18)
+                .addComponent(searchItemTF, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                     .addContainerGap(425, Short.MAX_VALUE)
@@ -206,12 +203,11 @@ public class MainPage extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(searchItemTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(searchItemBtn))
+                    .addComponent(searchItemBtn)
+                    .addComponent(addBtn))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(addBtn)
-                .addContainerGap())
+                .addGap(45, 45, 45))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                     .addContainerGap(74, Short.MAX_VALUE)
@@ -231,7 +227,11 @@ public class MainPage extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(listInvoice);
 
-        searchInvoiceTF.setText("search invoices");
+        searchInvoiceTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchInvoiceTFActionPerformed(evt);
+            }
+        });
 
         searchInvoiceBtn.setText("Search Invoice");
         searchInvoiceBtn.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -255,14 +255,18 @@ public class MainPage extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addComponent(searchInvoiceTF)
-                .addGap(18, 18, 18)
-                .addComponent(searchInvoiceBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(86, 86, 86))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 102, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(searchInvoiceBtn)
+                        .addGap(18, 18, 18)
+                        .addComponent(searchInvoiceTF, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                     .addContainerGap(424, Short.MAX_VALUE)
@@ -298,7 +302,6 @@ public class MainPage extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(listDeliveryNote);
 
-        searchDeliveryNoteTF.setText("search delivery note");
         searchDeliveryNoteTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchDeliveryNoteTFActionPerformed(evt);
@@ -332,12 +335,16 @@ public class MainPage extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(searchDeliveryNoteTF, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(109, 109, 109)
+                        .addComponent(searchDeliveyNoteBtn)
                         .addGap(18, 18, 18)
-                        .addComponent(searchDeliveyNoteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(viewDeliveryNoteBtn))
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(searchDeliveryNoteTF))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(viewDeliveryNoteBtn))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(10, 10, 10))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                     .addContainerGap(428, Short.MAX_VALUE)
@@ -410,7 +417,7 @@ public class MainPage extends javax.swing.JFrame {
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -493,6 +500,10 @@ public class MainPage extends javax.swing.JFrame {
     private void searchDeliveyNoteBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchDeliveyNoteBtnMouseClicked
         listDeliveryNoteCtl.searchDeliveryNote(searchDeliveryNoteTF.getText());
     }//GEN-LAST:event_searchDeliveyNoteBtnMouseClicked
+
+    private void searchInvoiceTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchInvoiceTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchInvoiceTFActionPerformed
     
      public void showListDeliveryNote(List<DeliveryNote> deliveryNotes){
         DefaultTableModel model = (DefaultTableModel) listDeliveryNote.getModel();
