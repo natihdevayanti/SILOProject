@@ -7,7 +7,7 @@ package silo;
 
 /**
  *
- * @author VincentT
+ * @author ASUS
  */
 public class DeliveryNoteDetailPage extends javax.swing.JFrame {
 

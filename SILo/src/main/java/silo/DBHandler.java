@@ -18,7 +18,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author feral
+ * @author putrinatih
  */
 public class DBHandler {
 
@@ -38,7 +38,7 @@ public class DBHandler {
     public void createItemData(){
         items = new ArrayList<Item>();
         try{
-            File itemDb = new File("ItemData.txt");
+            File itemDb = new File("ItemDB.txt");
             Scanner scanner = new Scanner(itemDb);
             while(scanner.hasNextLine()){
                 String data = scanner.nextLine();
@@ -52,7 +52,7 @@ public class DBHandler {
     public void createInvoiceData(){
         invoices = new ArrayList<Invoice>();
         try{
-            File invoiceDb = new File("InvoiceData.txt");
+            File invoiceDb = new File("InvoiceDB.txt");
             Scanner scanner = new Scanner(invoiceDb);
             while(scanner.hasNextLine()){
                 String data = scanner.nextLine();
@@ -74,7 +74,7 @@ public class DBHandler {
     public void createDeliveryNoteData() throws ParseException{
         deliveryNotes = new ArrayList<DeliveryNote>();
         try{
-            File dnDb = new File("DeliveryNoteData.txt");
+            File dnDb = new File("DeliveryNoteDB.txt");
             Scanner scanner = new Scanner(dnDb);
             while(scanner.hasNextLine()){
                 String data = scanner.nextLine();

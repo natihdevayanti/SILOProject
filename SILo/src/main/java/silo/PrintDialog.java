@@ -7,9 +7,9 @@ package silo;
 
 /**
  *
- * @author putrinatih
+ * @author ASUS
  */
-public class PrintDialog extends javax.swing.JPanel {
+public class PrintDialog extends javax.swing.JFrame {
 
     /**
      * Creates new form PrintDialog
@@ -17,7 +17,7 @@ public class PrintDialog extends javax.swing.JPanel {
     public PrintDialog(DeliveryNoteDetailPage deliveryNoteDetailPage) {
         initComponents();
         
-         this.deliveryNoteDetailPage = deliveryNoteDetailPage;
+        this.deliveryNoteDetailPage = deliveryNoteDetailPage;
     }
 
     /**
@@ -30,32 +30,74 @@ public class PrintDialog extends javax.swing.JPanel {
     private void initComponents() {
 
         okButton = new javax.swing.JButton();
+        jCheckBox1 = new javax.swing.JCheckBox();
 
-        setBackground(new java.awt.Color(255, 204, 255));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         okButton.setText("OK");
+        okButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                okButtonMouseClicked(evt);
+            }
+        });
+        okButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                okButtonActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        jCheckBox1.setText("with details");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(149, 149, 149)
-                .addComponent(okButton)
-                .addContainerGap(176, Short.MAX_VALUE))
+                .addGap(156, 156, 156)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(163, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(195, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(123, 123, 123)
+                .addComponent(jCheckBox1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addComponent(okButton)
-                .addGap(76, 76, 76))
+                .addGap(58, 58, 58))
         );
-    }// </editor-fold>//GEN-END:initComponents
- private DeliveryNoteDetailPage deliveryNoteDetailPage;
-    
 
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_okButtonActionPerformed
+
+    private void okButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_okButtonMouseClicked
+        deliveryNoteDetailPage.requestPrint();
+    }//GEN-LAST:event_okButtonMouseClicked
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+
+
+    private DeliveryNoteDetailPage deliveryNoteDetailPage;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JButton okButton;
     // End of variables declaration//GEN-END:variables
 }
