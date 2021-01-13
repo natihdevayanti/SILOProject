@@ -10,12 +10,15 @@ import java.util.Date;
  *
  * @author ASUS
  */
-public class DeliveryNote {
-    public int deliveryNoteNumber;
+    public class DeliveryNote {
+    public String invoiceNumber;
+    public String deliveryNoteNumber;
+    public String customerName;
+    public String customerEmail;
     private Date deliveryNoteOrderDate;
     private Date deliveryNoteDeliveryDate;
-    private int deliveryNoteStatus;
-    
+    private String deliveryNoteStatus;
+
     public void changeDeliveryNoteStatus(int status){
         this.deliveryNoteStatus = status;
     }

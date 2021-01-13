@@ -11,12 +11,12 @@ import java.util.Date;
  * @author ASUS
  */
 public class Invoice {
-    public int invoiceNumber;
-    private int poNumber;
-    private String supplierName;
-    private Date invoiceOrderDate;
-    private Date invoiceDeliveryDate;
-    private int invoiceStatus;
+    public String invoiceNumber;
+    public String poNumber;
+    public String supplierName;
+    public Date invoiceOrderDate;
+    public Date invoiceDeliveryDate;
+    public String invoiceStatus;
     
     public void changeInvoiceStatus(int status){
         this.invoiceStatus = status;
