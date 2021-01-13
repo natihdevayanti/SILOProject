@@ -41,7 +41,7 @@ public class NewItemForm extends javax.swing.JPanel {
         urlTF = new javax.swing.JTextField();
         numberOfStocksLabel = new javax.swing.JLabel();
         numberOfStocksTF = new javax.swing.JTextField();
-        submitBtn = new javax.swing.JButton();
+        submitButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         barcodeLbl.setText("Barcode");
@@ -68,10 +68,10 @@ public class NewItemForm extends javax.swing.JPanel {
 
         numberOfStocksTF.setToolTipText("");
 
-        submitBtn.setText("Submit");
-        submitBtn.addActionListener(new java.awt.event.ActionListener() {
+        submitButton.setText("Submit");
+        submitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitBtnActionPerformed(evt);
+                submitButtonActionPerformed(evt);
             }
         });
 
@@ -84,7 +84,7 @@ public class NewItemForm extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(submitBtn))
+                        .addComponent(submitButton))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,7 +140,7 @@ public class NewItemForm extends javax.swing.JPanel {
                     .addComponent(numberOfStocksTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(numberOfStocksLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(submitBtn)
+                .addComponent(submitButton)
                 .addGap(23, 23, 23))
         );
 
@@ -192,7 +192,7 @@ public class NewItemForm extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
+    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
         if (barcodeTF.getText().trim().isEmpty()
             || titleTF.getText().trim().isEmpty()
             || descriptionTF.getText().trim().isEmpty()
@@ -212,7 +212,7 @@ public class NewItemForm extends javax.swing.JPanel {
             numberOfStocksTF.getText(),
         };
         mainPage.simpanItemBaru(input);
-    }//GEN-LAST:event_submitBtnActionPerformed
+    }//GEN-LAST:event_submitButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -227,7 +227,7 @@ public class NewItemForm extends javax.swing.JPanel {
     private javax.swing.JTextField manufacturerTF;
     private javax.swing.JLabel numberOfStocksLabel;
     private javax.swing.JTextField numberOfStocksTF;
-    private javax.swing.JButton submitBtn;
+    private javax.swing.JButton submitButton;
     private javax.swing.JLabel titleLabel;
     private javax.swing.JTextField titleTF;
     private javax.swing.JLabel urlLabel;

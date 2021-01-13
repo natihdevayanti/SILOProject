@@ -33,7 +33,7 @@ public class Item {
     }
     
     public String toString() {
-        String res = "id: " + itemId + "\n"
+        String res = "ID: " + itemId + "\n"
                 + "Barcode: " + barcode + "\n"
                 + "Title: " + title + "\n"
                 + "Desciption: " + description + "\n"
@@ -43,36 +43,49 @@ public class Item {
         return res;
     }
     
-    public void setStock(int stock){
-        this.numberOfStock = stock;
-    }
-    
-    public void editItemDescription(String desc){
-        this.description = desc;
-    }
-    
-    public Item createItem(int id ,char barcode, String title, String desc, String manufacturer, String Url,int stock){
-        Item newItem = new Item();
-        newItem.itemId = id;
-        newItem.barcode = barcode;
-        newItem.title = title;
-        newItem.description = desc;
-        newItem.manufacturer = manufacturer;
-        newItem.url = url;
-        newItem.numberOfStock = Integer.parseInt(numberOfStock);
-        
-        return newItem;
-    }
-    
-    public void updateItem(int id ,char barcode, String title, String desc, String manufacturer, String Url,int stock){
-        this.itemId = id;
+ //konstruksi item dari fields yg ada
+    public Item(String id ,String barcode, String title, String description, String manufacturer, String url,String numberOfStock){
+        //Item newItem = new Item();
+        this.itemId =  Integer.parseInt(id);
         this.barcode = barcode;
         this.title = title;
-        this.description = desc;
+        this.description = description;
         this.manufacturer = manufacturer;
         this.url = url;
-        this.numberOfStock = stock;
+        this.numberOfStock = Integer.parseInt(numberOfStock);
+        
+        //return newItem;
+    }
+   
+    //buat item baru
+    public Item(String barcode, String title, String description, String manufacturer, String url,String numberOfStock){
+       // this.itemId = id;
+        this.barcode = barcode;
+        this.title = title;
+        this.description = description;
+        this.manufacturer = manufacturer;
+        this.url = url;
+        this.numberOfStock = numberOfStock;
     }
     
+       public Vector<String> toVector() {
+        Vector<String> current = new Vector<>();
+        current.add(String.valueOf(this.itemId));
+        current.add(this.barcode);
+        current.add(this.title);
+        current.add(this.description);
+        current.add(this.manufacturer);
+        current.add(this.url);
+        current.add(String.valueOf(this.numberOfStock));
+        return current;
+    }
     
+    //    public void setStock(int stock){
+//        this.numberOfStock = stock;
+//    }
+//    
+//    public void editItemDescription(String desc){
+//        this.description = desc;
+//    }
+//    
 }
