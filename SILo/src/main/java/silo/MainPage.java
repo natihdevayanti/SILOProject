@@ -5,7 +5,9 @@
  */
 package silo;
 
+import java.awt.BorderLayout;
 import java.awt.CardLayout;
+import java.util.ArrayList;
 import javax.swing.JPanel;
 
 /**
@@ -19,20 +21,105 @@ public class MainPage extends javax.swing.JFrame {
      */
     private DBHandler dbHandler;
     private ItemCtl itemCtl;
-     private SJCtl sjCtl;
-    private SPCtl spCtl;
+     private DeliveryNoteCtl deliveryNoteCtl;
+    private InvoiceCtl invoiceCtl;
     private CardLayout cardLayout = new CardLayout();
     private JPanel cardPanel;
-    private ItemList daftarItem;
-    private ItemBaruForm lastItemBaruForm;
+    private ItemList itemList;
+    private DeliveryNoteList deliveryNoteList;
+     private InvoiceList invoiceList;
+    private NewItemForm lastNewItemForm;
     private EditItemForm lastEditItemForm;
    
     
     
     public MainPage() {
+        setLayout(new BorderLayout());
         initComponents();
+        initObjects();
     }
 
+     public void initObjects() {
+        dbHandler = new DBHandler();
+        itemCtl = new ItemCtl(this);
+        itemCtl.addDBHanlder(dbHandler);
+        deliveryNoteCtl = new DeliveryNoteCtl(this);
+        invoiceCtl.addDBHanlder(dbHandler);
+        invoiceCtl = new InvoiceCtl(this);
+        invoiceCtl.addDBHanlder(dbHandler);
+        itemList = new ItemList(this);
+        deliveryNoteList = new DeliveryNoteList(this);
+        invoiceList = new InvoiceList(this);
+        
+        // Init JPanels
+        cardPanel = new JPanel();
+        cardPanel.setLayout(cardLayout);
+        cardPanel.add(new JPanel(), "Empty Panel");
+        cardPanel.add(itemList, "Item List");
+        cardPanel.add(deliveryNoteList, "Delivery Note List");
+        cardPanel.add(invoiceList, "Invoice List");
+        setContentPane(cardPanel);
+    }
+     
+         void showMainPage() {
+        cardLayout.show(cardPanel, "Empty Panel");
+    }
+
+    // Start routes
+    public void showItemList() {
+        itemList.refresh();
+        cardLayout.show(cardPanel, "Daftar Item");
+    }
+
+    public ArrayList<Item> getItems() {
+        return itemCtl.getItems();
+    }
+
+    public ArrayList<Item> searchItem(String keyword) {
+        return itemCtl.searchItem(keyword);
+    }
+
+    public void onShowNewItemForm() {
+        itemCtl.showNewItemForm();
+    }
+
+    public void showNewItemForm() {
+        if (lastNewItemForm != null) {
+            cardPanel.remove(lastNewItemForm);
+        }
+        lastNewItemForm = new NewItemForm(this);
+        cardPanel.add(lastNewItemForm, "Detail SJ");
+        cardLayout.show(cardPanel, "Detail SJ");
+    }
+    
+    public void failsToCreateNewItem() {
+        itemCtl.showFailsToCreateNewItemDialog();
+    }
+    
+    public void saveNewItem(String[] input) {
+        itemCtl.saveNewItem(input);
+
+        this.showItemList();
+    }
+
+    public void onShowEditItemForm(Item curItem) {
+        itemCtl.showEditItemForm(curItem);
+    }
+
+    public void showEditItemForm(Item curItem) {
+        if (lastEditItemForm != null) {
+            cardPanel.remove(lastEditItemForm);
+        }
+        lastEditItemForm = new EditItemForm(this, curItem);
+        cardPanel.add(lastEditItemForm, "Detail SJ");
+        cardLayout.show(cardPanel, "Detail SJ");
+    }
+
+    public void saveEditedItem(String[] input) {
+        itemCtl.saveEditedItem(input);
+
+        this.showItemList();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -102,9 +189,9 @@ public class MainPage extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(105, 105, 105)
+                .addGap(103, 103, 103)
                 .addComponent(jLabel1)
-                .addGap(196, 196, 196)
+                .addGap(136, 136, 136)
                 .addComponent(deliveryNoteButton)
                 .addGap(62, 62, 62)
                 .addComponent(createDeliveryNoteButton)
@@ -112,7 +199,7 @@ public class MainPage extends javax.swing.JFrame {
                 .addComponent(invoiceButton)
                 .addGap(57, 57, 57)
                 .addComponent(jButton1)
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -129,10 +216,6 @@ public class MainPage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void deliveryNoteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deliveryNoteButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_deliveryNoteButtonActionPerformed
-
     private void invoiceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_invoiceButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_invoiceButtonActionPerformed
@@ -140,6 +223,10 @@ public class MainPage extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void deliveryNoteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deliveryNoteButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deliveryNoteButtonActionPerformed
 
     /**
      * @param args the command line arguments
