@@ -19,12 +19,14 @@ public class MainPage extends javax.swing.JFrame {
      */
     private DBHandler dbHandler;
     private ItemCtl itemCtl;
-     private SJCtl sjCtl;
-    private SPCtl spCtl;
+     private DeliveryNoteCtl deliveryNoteCtl;
+    private InvoiceCtl invoiceCtl;
     private CardLayout cardLayout = new CardLayout();
     private JPanel cardPanel;
-    private ItemList daftarItem;
-    private ItemBaruForm lastItemBaruForm;
+    private ItemList itemList;
+    private DeliveryNoteList deliveryNoteList;
+     private InvoiceList invoiceList;
+    private NewItemForm lastItemBaruForm;
     private EditItemForm lastEditItemForm;
    
     
