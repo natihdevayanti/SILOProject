@@ -4,19 +4,44 @@
  * and open the template in the editor.
  */
 package silo;
-
+import java.util.Vector;
 /**
  *
  * @author ASUS
  */
 public class Item {
     public int itemId;
-    private char barcode;
+    private String barcode;
     private String title;
     private String description;
     private String manufacturer;
     private String url;
     private int numberOfStock;
+   
+   
+    
+    public Item(String[] row) {
+        this(
+                row[0],
+                row[1],
+                row[2],
+                row[3],
+                row[4],
+                row[5],
+                row[6]
+        );
+    }
+    
+    public String toString() {
+        String res = "id: " + itemId + "\n"
+                + "Barcode: " + barcode + "\n"
+                + "Title: " + title + "\n"
+                + "Desciption: " + description + "\n"
+                + "Manufacturer: " + manufacturer + "\n"
+                + "URL: " + url + "\n"
+                + "Stock: " + numberOfStock + "\n";
+        return res;
+    }
     
     public void setStock(int stock){
         this.numberOfStock = stock;
@@ -34,7 +59,7 @@ public class Item {
         newItem.description = desc;
         newItem.manufacturer = manufacturer;
         newItem.url = url;
-        newItem.numberOfStock = stock;
+        newItem.numberOfStock = Integer.parseInt(numberOfStock);
         
         return newItem;
     }
