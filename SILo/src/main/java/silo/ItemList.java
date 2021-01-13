@@ -34,6 +34,9 @@ public class ItemList extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         itemTable = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(255, 204, 204));
+        setPreferredSize(new java.awt.Dimension(941, 726));
+
         jLabel1.setText("Sistem Informasi Logistik");
 
         addButton.setText("Add Item");

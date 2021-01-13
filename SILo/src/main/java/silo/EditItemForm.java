@@ -46,6 +46,8 @@ public class EditItemForm extends javax.swing.JPanel {
 
         jLabel2.setText("jLabel2");
 
+        setBackground(new java.awt.Color(255, 204, 204));
+
         barcodeLbl.setText("Barcode");
 
         barcodeTF.setToolTipText("");

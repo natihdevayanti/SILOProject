@@ -44,6 +44,8 @@ public class NewItemForm extends javax.swing.JPanel {
         submitButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
+        jPanel3.setBackground(new java.awt.Color(255, 204, 204));
+
         barcodeLbl.setText("Barcode");
 
         barcodeTF.setToolTipText("");
