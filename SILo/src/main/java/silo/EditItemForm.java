@@ -182,7 +182,7 @@ public class EditItemForm extends javax.swing.JPanel {
             || manufacturerTF.getText().trim().isEmpty()
             || urlTF.getText().trim().isEmpty()
             || numberOfStocksTF.getText().trim().isEmpty()) {
-            mainPage.gagalBuatItem();
+            mainPage.failsToCreateNewItem();
             return;
         }
 
@@ -194,7 +194,7 @@ public class EditItemForm extends javax.swing.JPanel {
             urlTF.getText(),
             numberOfStocksTF.getText(),
         };
-        mainPage.simpanItemBaru(input);
+        mainPage.saveNewItem(input);
     }//GEN-LAST:event_submitButtonActionPerformed
 
 
