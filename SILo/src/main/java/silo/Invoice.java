@@ -17,19 +17,19 @@ public class Invoice {
     private int invoiceNumber;
     private int PONumber;
     private String supplierName;
-    Date orderDate = new Date();
-    Date deliveryDate = new Date();
-    private String status;
+    Date invoiceOrderDate = new Date();
+    Date invoiceDeliveryDate = new Date();
+    private String invoiceStatus;
     
     SimpleDateFormat formatter;
 
-    public Invoice(int invoiceNumber, int PONumber, String supplierName, Date orderDate, Date deliveryDate, String status){
+    public Invoice(int invoiceNumber, int PONumber, String supplierName, Date invoiceOrderDate, Date invoiceDeliveryDate, String invoiceStatus){
         this.invoiceNumber = invoiceNumber;
         this.PONumber = PONumber;
         this.supplierName = supplierName;
-        this.orderDate = orderDate;
-        this.deliveryDate = deliveryDate;
-        this.status = status;
+        this.invoiceOrderDate = invoiceOrderDate;
+        this.invoiceDeliveryDate = invoiceDeliveryDate;
+        this.invoiceStatus = invoiceStatus;
         
         formatter =new SimpleDateFormat("dd-MMM-yyyy"); 
     }
@@ -47,15 +47,15 @@ public class Invoice {
     }
 
     public Date getOrderDate() {
-        return orderDate;
+        return invoiceOrderDate;
     }
 
     public Date getDeliveryDate() {
-        return deliveryDate;
+        return invoiceDeliveryDate;
     }
 
     public String getStatus() {
-        return status;
+        return invoiceStatus;
     }
 
     public void setInvoiceNumber(int invoiceNumber) {
@@ -70,24 +70,24 @@ public class Invoice {
         this.supplierName = supplierName;
     }
 
-    public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
+    public void setOrderDate(Date invoiceOrderDate) {
+        this.invoiceOrderDate = invoiceOrderDate;
     }
 
-    public void setDeliveryDate(Date deliveryDate) {
-        this.deliveryDate = deliveryDate;
+    public void setDeliveryDate(Date invoiceDeliveryDate) {
+        this.invoiceDeliveryDate = invoiceDeliveryDate;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setStatus(String invoiceStatus) {
+        this.invoiceStatus = invoiceStatus;
     }
     
     public String getOrderDateString() {
-        return formatter.format(orderDate);
+        return formatter.format(invoiceOrderDate);
     }
 
     public String getDeliveryDateString() {
-        return formatter.format(deliveryDate);
+        return formatter.format(invoiceDeliveryDate);
     }
 }
 

@@ -13,27 +13,27 @@ import java.text.SimpleDateFormat;
  * @author ASUS
  */
     public class DeliveryNote {
-    public int invoiceNumber;
+    public int deliveryNoteInvoiceNumber;
     public int deliveryNoteNumber;
-    public String customerName;
-    Date orderDate = new Date();
-    Date deliveryDate = new Date();
+    public String deliveryNoteCustomerName;
+    Date deliveryNoteOrderDate = new Date();
+    Date deliveryNoteDeliveryDate = new Date();
     private String deliveryNoteStatus;
     
     SimpleDateFormat formatter;
 
     public DeliveryNote(int invoiceNumber, int deliveryNoteNumber, String customerName, Date orderDate, Date deliveryDate, String status) throws ParseException{
-        this.invoiceNumber = invoiceNumber;
+        this.deliveryNoteInvoiceNumber = invoiceNumber;
         this.deliveryNoteNumber = deliveryNoteNumber;
-        this.customerName = customerName;
+        this.deliveryNoteCustomerName = customerName;
         formatter =new SimpleDateFormat("dd-MMM-yyyy"); 
-        this.orderDate = orderDate;
-        this.deliveryDate = deliveryDate;
+        this.deliveryNoteOrderDate = orderDate;
+        this.deliveryNoteDeliveryDate = deliveryDate;
         this.deliveryNoteStatus = status;
     }
     
     public int getInvoiceNumber() {
-        return invoiceNumber;
+        return deliveryNoteInvoiceNumber;
     }
 
     public int getDeliveryNoteNumber() {
@@ -41,15 +41,15 @@ import java.text.SimpleDateFormat;
     }
 
     public String getCustomerName() {
-        return customerName;
+        return deliveryNoteCustomerName;
     }
 
     public Date getOrderDate() {
-        return orderDate;
+        return deliveryNoteOrderDate;
     }
 
     public Date getDeliveryDate() {
-        return deliveryDate;
+        return deliveryNoteDeliveryDate;
     }
 
     public String getStatus() {
@@ -57,7 +57,7 @@ import java.text.SimpleDateFormat;
     }
 
     public void setInvoiceNumber(int invoiceNumber) {
-        this.invoiceNumber = invoiceNumber;
+        this.deliveryNoteInvoiceNumber = invoiceNumber;
     }
 
     public void setDeliveryNoteNumber(int deliveryNoteNumber) {
@@ -65,15 +65,15 @@ import java.text.SimpleDateFormat;
     }
 
     public void setCustomerName(String customerName) {
-        this.customerName = customerName;
+        this.deliveryNoteCustomerName = customerName;
     }
 
     public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
+        this.deliveryNoteOrderDate = orderDate;
     }
 
     public void setDeliveryDate(Date deliveryDate) {
-        this.deliveryDate = deliveryDate;
+        this.deliveryNoteDeliveryDate = deliveryDate;
     }
 
     public void setStatus(String status) {
@@ -81,11 +81,11 @@ import java.text.SimpleDateFormat;
     }
     
     public String getOrderDateString() {
-        return formatter.format(orderDate);
+        return formatter.format(deliveryNoteOrderDate);
     }
 
     public String getDeliveryDateString() {
-        return formatter.format(deliveryDate);
+        return formatter.format(deliveryNoteDeliveryDate);
     }
     
     
