@@ -20,16 +20,16 @@ public class DaftarItemCtl {
         this.mainpage = mainpage;
     }
     
-    public void getListItem(){
+    public void getItemList(){
        
         //Object[] results =   dbHandler.getListItem();
         List<Item> items = dbHandler.getListItem();
-        mainpage.showListItem(items);
+        mainpage.showItemList(items);
     }
     
     
     public void searchItem(String keyword){
         List<Item> items = dbHandler.searchItem(keyword);
-        mainpage.showListItem(items);
+        mainpage.showItemList(items);
     }
 }

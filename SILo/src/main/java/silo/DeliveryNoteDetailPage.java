@@ -251,7 +251,7 @@ public class DeliveryNoteDetailPage extends javax.swing.JFrame {
     public void sendSoftCopyDone(){
         //berhasil dikirim
         sendingForm.setVisible(false);
-        deliveryNoteCtl.sendSoftCopyDone();
+        deliveryNoteCtl.SendSoftcopy();
     }
     
     public void requestPrint(){

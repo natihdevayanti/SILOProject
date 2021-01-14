@@ -460,7 +460,7 @@ public class MainPage extends javax.swing.JFrame {
         jPanel3.setVisible(false);
         jPanel1.setVisible(true);
         addBtn.setVisible(true);
-        listItemCtl.getListItem();
+        listItemCtl.getItemList();
         // TODO add your handling code here:
     }//GEN-LAST:event_itemMIMouseClicked
 
@@ -544,7 +544,7 @@ public class MainPage extends javax.swing.JFrame {
         }
     }
      
-    public void showListItem(List<Item> items) {
+    public void showItemList(List<Item> items) {
         jPanel2.setVisible(false);
         jPanel3.setVisible(false);
         jPanel1.setVisible(true);
@@ -651,7 +651,7 @@ public class MainPage extends javax.swing.JFrame {
     }
      
     public void refreshItemList(){
-        listItemCtl.getListItem();
+        listItemCtl.getItemList();
         //refresh data on table
     }
     

@@ -49,11 +49,11 @@ public class DeliveryNoteCtl {
         int lastIdx = dbHandler.getListDeliveryNote().size();
         DeliveryNote dn = dbHandler.getListDeliveryNote().get(lastIdx-1);
         
-        showDeliveryNoteDescription(dn);
+//        showDeliveryNoteDescription(dn);
         mainpage.refreshDeliveryNoteList();
     }
      
-     public void sendSoftCopyDone(){
+     public void SendSoftcopy(){
         //beres kirim softcopy
         deliveryNoteDetailPage.setVisible(false);
     }
