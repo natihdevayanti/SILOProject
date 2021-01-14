@@ -19,13 +19,13 @@ public class DaftarDeliveryNoteCtl {
         this.mainpage = mainpage;
     }
     
-    public void getListDeliveryNote(){
-        List<DeliveryNote> deliveryNotes = dbHandler.getListDeliveryNote();
-        mainpage.showListDeliveryNote(deliveryNotes);
+    public void getDeliveryNoteList(){
+        List<DeliveryNote> deliveryNotes = dbHandler.getDeliveryNoteList();
+        mainpage.showDeliveryNoteList(deliveryNotes);
     }
     
     public void searchDeliveryNote(String keyword){
         List<DeliveryNote> ldn = dbHandler.searchDeliveryNote(keyword);
-        mainpage.showListDeliveryNote(ldn);
+        mainpage.showDeliveryNoteList(ldn);
     }
 }

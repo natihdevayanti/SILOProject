@@ -45,8 +45,8 @@ public class DeliveryNoteCtl {
         dbHandler.insertData(invoiceNumber, deliveryNoteNumber, customerName, orderDate, deliveryDate, status);
         deliveryNoteForm.setVisible(false);
         
-        int lastIdx = dbHandler.getListDeliveryNote().size();
-        DeliveryNote dn = dbHandler.getListDeliveryNote().get(lastIdx-1);
+        int lastIdx = dbHandler.getDeliveryNoteList().size();
+        DeliveryNote dn = dbHandler.getDeliveryNoteList().get(lastIdx-1);
         
         mainpage.refreshDeliveryNoteList();
     }

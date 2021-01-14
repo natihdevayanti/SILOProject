@@ -482,7 +482,7 @@ public class MainPage extends javax.swing.JFrame {
         jPanel1.setVisible(false);
         jPanel3.setVisible(true);
 
-        listDeliveryNoteCtl.getListDeliveryNote();
+        listDeliveryNoteCtl.getDeliveryNoteList();
     }//GEN-LAST:event_viewDeliveryNoteMenuMouseClicked
 
     private void addBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addBtnMouseClicked
@@ -525,7 +525,7 @@ public class MainPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_searchInvoiceTFActionPerformed
     
-     public void showListDeliveryNote(List<DeliveryNote> deliveryNotes){
+     public void showDeliveryNoteList(List<DeliveryNote> deliveryNotes){
         DefaultTableModel model = (DefaultTableModel) listDeliveryNote.getModel();
 
         int rowCount = listDeliveryNote.getRowCount();
@@ -656,7 +656,7 @@ public class MainPage extends javax.swing.JFrame {
     }
     
     public void refreshDeliveryNoteList(){
-        listDeliveryNoteCtl.getListDeliveryNote();
+        listDeliveryNoteCtl.getDeliveryNoteList();
     }
     
     public void refreshInvoiceList(){

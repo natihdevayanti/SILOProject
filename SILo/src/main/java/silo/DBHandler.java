@@ -92,7 +92,7 @@ public class DBHandler {
         } catch(FileNotFoundException e){}
     }
     
-    public List<DeliveryNote> getListDeliveryNote(){
+    public List<DeliveryNote> getDeliveryNoteList(){
         return deliveryNotes;
     }
     
