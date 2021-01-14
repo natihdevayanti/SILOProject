@@ -17,7 +17,6 @@ public class DeliveryNoteCtl {
     private DBHandler dbHandler;
     private DeliveryNoteForm deliveryNoteForm;
     private DeliveryNoteDetailPage deliveryNoteDetailPage;
-    
     private int editDeliveryNoteIndex=0;
     
     public DeliveryNoteCtl(){
@@ -50,14 +49,12 @@ public class DeliveryNoteCtl {
         
         mainpage.refreshDeliveryNoteList();
     }
-     
+
      public void SendSoftcopy(){
-        //beres kirim softcopy
         deliveryNoteDetailPage.setVisible(false);
     }
      
      public void requestPrint(){
-        //print
         deliveryNoteDetailPage.setVisible(false);
     }
     

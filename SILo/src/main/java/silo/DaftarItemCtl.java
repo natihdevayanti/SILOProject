@@ -14,6 +14,7 @@ public class DaftarItemCtl {
     private DBHandler dbHandler;
     private Item item[];
     private MainPage mainpage;
+
     
     public DaftarItemCtl(DBHandler dbHandler, MainPage mainpage){
         this.dbHandler = dbHandler;

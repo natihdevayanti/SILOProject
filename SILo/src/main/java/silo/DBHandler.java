@@ -25,9 +25,7 @@ public class DBHandler {
     private List<Item> items;
     private List<Invoice> invoices;
     private List<DeliveryNote> deliveryNotes;
-    
     private SimpleDateFormat formatter;
-    
     public DBHandler() throws ParseException{
         formatter = new SimpleDateFormat("dd-MMM-yyyy");
         createItemData();
@@ -118,7 +116,6 @@ public class DBHandler {
     }
     
     public void insertData(String id,String barcode,String description, String manufacturer, String title, String url, int stock){
-        //insert item data to database
         items.add(new Item(id,barcode,description, manufacturer, title, url, stock));
         try{
             FileWriter writer = new FileWriter("ItemDB.txt");
@@ -143,7 +140,6 @@ public class DBHandler {
     
     public void updateData(String id,String barcode,String description, String manufacturer, String title, String url, int stock, int index)
     {
-        //update item data to database
         items.get(index).setId(id);
         items.get(index).setBarcode(barcode);
         items.get(index).setDescription(description);
@@ -174,7 +170,6 @@ public class DBHandler {
     }
     
     public void insertData(String invoiceNumber, String deliveryNoteNumber, String CustomerName, String orderDate, String deliveryDate, String status) throws ParseException{
-        //insert delivery note data to database
         deliveryNotes.add(new DeliveryNote(Integer.parseInt(invoiceNumber), Integer.parseInt(deliveryNoteNumber), CustomerName, formatter.parse(orderDate), formatter.parse(deliveryDate), status));
         try{
             FileWriter writer = new FileWriter("DeliveryNoteDB.txt");

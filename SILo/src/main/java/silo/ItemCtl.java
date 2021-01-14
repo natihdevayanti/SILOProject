@@ -10,11 +10,9 @@ package silo;
  * @author putrinatih
  */
 public class ItemCtl {
-     int editItemIndex = 0;
-    
+    int editItemIndex = 0;
     private DBHandler dbhandler;
     private MainPage mainpage;
-    
     private ItemForm addNewItemForm;
     private ItemForm editItemForm;
     
