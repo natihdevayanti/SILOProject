@@ -24,14 +24,11 @@ public class InvoiceCtl {
     }
     
     public void getInvoiceDescription(Invoice invoice, int index){
-        //String[] result = dbHandler.getInvoiceDescriptionDB();
-        //Invoice[] invoice = createInvoice(result);
         
         detailInvoicePage.setVisible(true);
         detailInvoicePage.setCurrentInvoice(invoice);
         viewInvoiceIndex = index;
         
-        //mainPage.showInvoiceDescription();
     }
 
     private Invoice[] createInvoice(String[] result) {

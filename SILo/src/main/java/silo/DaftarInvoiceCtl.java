@@ -29,10 +29,6 @@ public class DaftarInvoiceCtl {
     }
     
      public void searchInvoice(String keyword){
-//        String[] results =   dbHandler.getListInvoice(keyword);
-//        Invoice[] invoices = createInvoice(results);
-//        mainpage.showListInvoice(invoices);
-
         List<Invoice> inv = dbHandler.searchInvoice(keyword);
         mainpage.showListInvoice(inv);
     }

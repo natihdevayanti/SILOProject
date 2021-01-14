@@ -43,7 +43,6 @@ public class DBHandler {
             while(scanner.hasNextLine()){
                 String data = scanner.nextLine();
                 String[] str = data.split("/");
-                //System.out.println(str[0] + "  " + str[1] + "  " + str[2] + "  " + str[3]);
                 items.add(new Item(str[0], str[1], str[2], str[3], str[4], str[5], Integer.parseInt(str[6])));
             }
         } catch(FileNotFoundException e){}

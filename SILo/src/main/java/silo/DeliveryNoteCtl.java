@@ -43,13 +43,11 @@ public class DeliveryNoteCtl {
      public void addNewDeliveryNoteData(String invoiceNumber,String deliveryNoteNumber,String customerName,String orderDate,
             String deliveryDate,String status) throws ParseException{
         dbHandler.insertData(invoiceNumber, deliveryNoteNumber, customerName, orderDate, deliveryDate, status);
-//        System.out.println(invoiceNumber+deliveryNoteNumber+customerName+ orderDate+ deliveryDate+status);
         deliveryNoteForm.setVisible(false);
         
         int lastIdx = dbHandler.getListDeliveryNote().size();
         DeliveryNote dn = dbHandler.getListDeliveryNote().get(lastIdx-1);
         
-//        showDeliveryNoteDescription(dn);
         mainpage.refreshDeliveryNoteList();
     }
      

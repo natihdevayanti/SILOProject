@@ -21,8 +21,7 @@ public class DaftarItemCtl {
     }
     
     public void getItemList(){
-       
-        //Object[] results =   dbHandler.getListItem();
+
         List<Item> items = dbHandler.getListItem();
         mainpage.showItemList(items);
     }
