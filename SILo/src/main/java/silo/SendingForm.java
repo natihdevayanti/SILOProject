@@ -188,7 +188,7 @@ public class SendingForm extends javax.swing.JFrame {
 
     private void sendBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sendBtnMouseClicked
    
-        Alert alert = new Alert(3);
+        Alert1 alert = new Alert1(3);
         alert.setVisible(true);
         deliveryNoteDetailPage.sendSoftCopyDone();
     }//GEN-LAST:event_sendBtnMouseClicked
