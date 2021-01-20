@@ -309,7 +309,7 @@ public class ItemForm extends javax.swing.JFrame {
         itemCtl.cancelAddNewItem();
     }
     
-    public void setController(ItemCtl itemCtl, DialogBox dialogBox){
+    public void setController(ItemCtl itemCtl, DialogBox1 dialogBox){
         this.itemCtl = itemCtl;
         this.dialogBox = dialogBox;
     }
@@ -325,7 +325,7 @@ public class ItemForm extends javax.swing.JFrame {
     }
     
     private ItemCtl itemCtl;
-    private DialogBox dialogBox;
+    private DialogBox1 dialogBox;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField barcodeTF;

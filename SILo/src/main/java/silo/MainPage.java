@@ -32,7 +32,7 @@ public class MainPage extends javax.swing.JFrame {
     static DaftarDeliveryNoteCtl listDeliveryNoteCtl;
     static DaftarItemCtl listItemCtl;
     static ItemCtl itemCtl;
-    static DialogBox dialogBox;
+    static DialogBox1 dialogBox;
    
     
     
@@ -52,7 +52,7 @@ public class MainPage extends javax.swing.JFrame {
         addNewItemForm = new ItemForm(1);
         editItemForm = new ItemForm(2);
         invoiceDetailPage = new InvoiceDetailPage();
-        dialogBox = new DialogBox(addNewItemForm);
+        dialogBox = new DialogBox1(addNewItemForm);
         
         deliveryNoteCtl = new DeliveryNoteCtl(dbHandler,this,deliveryNoteForm, deliveryNoteDetailPage);
         listDeliveryNoteCtl = new DaftarDeliveryNoteCtl(dbHandler,this);
