@@ -47,6 +47,7 @@ public class DeliveryNoteCtl {
         int lastIdx = dbHandler.getDeliveryNoteList().size();
         DeliveryNote dn = dbHandler.getDeliveryNoteList().get(lastIdx-1);
         
+        showDeliveryNoteDescription(dn);
         mainpage.refreshDeliveryNoteList();
     }
 
