@@ -102,9 +102,9 @@ public class DBHandler {
         List<Item> matchedItem = new ArrayList<Item>();
         for(int i=0; i<items.size(); i++){
             Item temp = items.get(i);
-            if(temp.getId().toLowerCase().contains(keyword) ||
-                    temp.getTitle().toLowerCase().contains(keyword) ||
-                    temp.getManufacturer().toLowerCase().contains(keyword))
+            if(temp.getId().contains(keyword) ||
+                    temp.getTitle().contains(keyword) ||
+                    temp.getManufacturer().contains(keyword))
                 matchedItem.add(temp);
         }
         
@@ -267,10 +267,10 @@ public class DBHandler {
             DeliveryNote temp = deliveryNotes.get(i);
             if(String.valueOf(temp.getInvoiceNumber()).contains(keyword) ||
                 String.valueOf(temp.getDeliveryNoteNumber()).contains(keyword) ||
-                temp.getCustomerName().toLowerCase().contains(keyword) ||
+                temp.getCustomerName().contains(keyword) ||
                 temp.getOrderDateString().contains(keyword) ||
                 temp.getDeliveryDateString().contains(keyword) ||
-                temp.getStatus().toLowerCase().contains(keyword))
+                temp.getStatus().contains(keyword))
                 matchedDeliveryNote.add(temp);
         }
         
@@ -287,10 +287,10 @@ public class DBHandler {
             Invoice temp = invoices.get(i);
             if(String.valueOf(temp.getInvoiceNumber()).contains(keyword) ||
                 String.valueOf(temp.getPONumber()).contains(keyword) ||
-                temp.getSupplierName().toLowerCase().contains(keyword) ||
+                temp.getSupplierName().contains(keyword) ||
                 temp.getOrderDateString().contains(keyword) ||
                 temp.getDeliveryDateString().contains(keyword) ||
-                temp.getStatus().toLowerCase().contains(keyword))
+                temp.getStatus().contains(keyword))
                 matchedInvoice.add(temp);
         }
         

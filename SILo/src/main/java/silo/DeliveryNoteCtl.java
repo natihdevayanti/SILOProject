@@ -61,7 +61,7 @@ public class DeliveryNoteCtl {
     
     public void requestChangeStatus(String currState, String deliveryNoteNumber){
         dbHandler.changeDeliveryNoteStatus(currState, deliveryNoteNumber);
-        deliveryNoteDetailPage.setVisible(false);
+//        deliveryNoteDetailPage.setVisible(false);
         mainpage.refreshDeliveryNoteList();
     }
     
@@ -69,5 +69,9 @@ public class DeliveryNoteCtl {
         deliveryNoteDetailPage.setVisible(true);
         deliveryNoteDetailPage.setCurrentDeliveryNote(deliveryNote);
         editDeliveryNoteIndex = index;
+    }
+    
+    public void closeDeliveryNoteDetailPage(){
+        deliveryNoteDetailPage.setVisible(false);
     }
 }

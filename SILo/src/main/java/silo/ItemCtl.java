@@ -53,4 +53,8 @@ public class ItemCtl {
         addNewItemForm.setVisible(false);
     }
     
+    public void closeItemForm() {
+        editItemForm.setVisible(false);
+    }
+    
 }

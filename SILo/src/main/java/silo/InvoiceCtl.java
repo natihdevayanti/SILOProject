@@ -36,9 +36,13 @@ public class InvoiceCtl {
     }
 
     void requestChangeStatus(String status, String invoiceNumber) {
-        detailInvoicePage.setVisible(false);
+//        detailInvoicePage.setVisible(false);
         dbHandler.changeInvoiceStatus(status, invoiceNumber);
         
         mainPage.refreshInvoiceList();
+    }
+    
+    void closeInvoiceDetailPage(){
+        detailInvoicePage.setVisible(false);
     }
 }
