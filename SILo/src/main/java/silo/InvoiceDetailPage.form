@@ -55,19 +55,19 @@
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="invoiceStatusLbl" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
-                                  <Component id="invoiceDeliveryDateLbl" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
-                                  <Component id="invoiceOrderDateLbl" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
-                                  <Component id="supplierNameLbl" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
-                                  <Component id="poNumberLbl" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
-                                  <Component id="invoiceNumberLbl" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
+                                  <Component id="invoiceStatusLabel" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
+                                  <Component id="invoiceDeliveryDateLabel" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
+                                  <Component id="invoiceOrderDateLabel" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
+                                  <Component id="supplierNameLabel" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
+                                  <Component id="poNumberLabel" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
+                                  <Component id="invoiceNumberLabel" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="pendingBtn" min="-2" max="-2" attributes="0"/>
+                              <Component id="pendingButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="acceptBtn" min="-2" pref="73" max="-2" attributes="0"/>
+                              <Component id="acceptButton" min="-2" pref="73" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -88,37 +88,37 @@
                   <EmptySpace pref="36" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="invoiceNumberLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="invoiceNumberLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="poNumberLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="poNumberLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="supplierNameLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="supplierNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="invoiceOrderDateLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="invoiceOrderDateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="invoiceDeliveryDateLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="invoiceDeliveryDateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="invoiceStatusLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="invoiceStatusLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="acceptBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="pendingBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="acceptButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="pendingButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
               </Group>
@@ -126,7 +126,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="acceptBtn">
+        <Component class="javax.swing.JButton" name="acceptButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="99" red="99" type="rgb"/>
@@ -134,10 +134,10 @@
             <Property name="text" type="java.lang.String" value="Accept"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="acceptBtnMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="acceptButtonMouseClicked"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="pendingBtn">
+        <Component class="javax.swing.JButton" name="pendingButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="99" red="99" type="rgb"/>
@@ -145,8 +145,8 @@
             <Property name="text" type="java.lang.String" value="Pending"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pendingBtnMouseClicked"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pendingBtnActionPerformed"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pendingButtonMouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pendingButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
@@ -179,32 +179,32 @@
             <Property name="text" type="java.lang.String" value="Status :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="invoiceNumberLbl">
+        <Component class="javax.swing.JLabel" name="invoiceNumberLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel7"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="poNumberLbl">
+        <Component class="javax.swing.JLabel" name="poNumberLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel7"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="supplierNameLbl">
+        <Component class="javax.swing.JLabel" name="supplierNameLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel7"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="invoiceOrderDateLbl">
+        <Component class="javax.swing.JLabel" name="invoiceOrderDateLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel7"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="invoiceDeliveryDateLbl">
+        <Component class="javax.swing.JLabel" name="invoiceDeliveryDateLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel7"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="invoiceStatusLbl">
+        <Component class="javax.swing.JLabel" name="invoiceStatusLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel7"/>
           </Properties>

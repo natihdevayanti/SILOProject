@@ -52,7 +52,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="sendBtn" min="-2" pref="73" max="-2" attributes="0"/>
+                              <Component id="sendButton" min="-2" pref="73" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -65,12 +65,12 @@
                                   </Group>
                                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="invoiceNumberLbl" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
-                                      <Component id="deliveryNoteNumberLbl" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
-                                      <Component id="orderDateLbl" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
-                                      <Component id="statusLbl" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
-                                      <Component id="deliveryDateLbl" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
-                                      <Component id="customerNameLbl" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                                      <Component id="invoiceNumberLabel" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                                      <Component id="deliveryNoteNumberLabel" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                                      <Component id="orderDateLabel" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                                      <Component id="statusLabel" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                                      <Component id="deliveryDateLabel" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
+                                      <Component id="customerNameLabel" alignment="0" min="-2" pref="122" max="-2" attributes="0"/>
                                       <Component id="emailTF" min="-2" pref="138" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -104,22 +104,21 @@
                           <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="invoiceNumberLbl" min="-2" max="-2" attributes="0"/>
+                          <Component id="invoiceNumberLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="deliveryNoteNumberLbl" min="-2" max="-2" attributes="0"/>
+                          <Component id="deliveryNoteNumberLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="customerNameLbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="customerNameLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="orderDateLbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="64" pref="64" max="-2" attributes="0"/>
+                                  <Component id="orderDateLabel" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="64" pref="64" max="-2" attributes="0"/>
-                                  <Component id="deliveryDateLbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="deliveryDateLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="statusLbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="statusLabel" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
@@ -127,7 +126,7 @@
                       </Group>
                   </Group>
                   <EmptySpace pref="25" max="32767" attributes="0"/>
-                  <Component id="sendBtn" min="-2" max="-2" attributes="0"/>
+                  <Component id="sendButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -139,7 +138,7 @@
             <Property name="text" type="java.lang.String" value="Sistem Informasi Logistik"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="sendBtn">
+        <Component class="javax.swing.JButton" name="sendButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="cc" red="ff" type="rgb"/>
@@ -147,7 +146,7 @@
             <Property name="text" type="java.lang.String" value="Send"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="sendBtnMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="sendButtonMouseClicked"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
@@ -180,32 +179,32 @@
             <Property name="text" type="java.lang.String" value="Customer Email  Address :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="invoiceNumberLbl">
+        <Component class="javax.swing.JLabel" name="invoiceNumberLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="deliveryNoteNumberLbl">
+        <Component class="javax.swing.JLabel" name="deliveryNoteNumberLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="orderDateLbl">
+        <Component class="javax.swing.JLabel" name="orderDateLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="deliveryDateLbl">
+        <Component class="javax.swing.JLabel" name="deliveryDateLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="statusLbl">
+        <Component class="javax.swing.JLabel" name="statusLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="customerNameLbl">
+        <Component class="javax.swing.JLabel" name="customerNameLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="1"/>
           </Properties>

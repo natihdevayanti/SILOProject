@@ -19,13 +19,13 @@ public class ItemForm extends javax.swing.JFrame {
      
         //for submit button
         if(type==1){ 
-            submitBtn.setVisible(true);
-            updateBtn.setVisible(false);
+            submitButton.setVisible(true);
+            updateButton.setVisible(false);
         }
         //for update button
         else if(type==2){ 
-            submitBtn.setVisible(false);
-            updateBtn.setVisible(true);
+            submitButton.setVisible(false);
+            updateButton.setVisible(true);
         }
     }
     
@@ -39,21 +39,21 @@ public class ItemForm extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        idLabel = new javax.swing.JLabel();
+        barcodeLabel = new javax.swing.JLabel();
+        titleLabel = new javax.swing.JLabel();
+        descriptionLabel = new javax.swing.JLabel();
+        manufacturerLabel = new javax.swing.JLabel();
+        urlLabel = new javax.swing.JLabel();
         idTF = new javax.swing.JTextField();
         barcodeTF = new javax.swing.JTextField();
         titleTF = new javax.swing.JTextField();
         descriptionTF = new javax.swing.JTextField();
         manufacturerTF = new javax.swing.JTextField();
         urlTF = new javax.swing.JTextField();
-        submitBtn = new javax.swing.JButton();
-        updateBtn = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
+        submitButton = new javax.swing.JButton();
+        updateButton = new javax.swing.JButton();
+        stockLabel = new javax.swing.JLabel();
         numberOfStockTF = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
 
@@ -61,17 +61,17 @@ public class ItemForm extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
-        jLabel1.setText("ID");
+        idLabel.setText("ID");
 
-        jLabel2.setText("Barcode");
+        barcodeLabel.setText("Barcode");
 
-        jLabel3.setText("Title");
+        titleLabel.setText("Title");
 
-        jLabel4.setText("Description");
+        descriptionLabel.setText("Description");
 
-        jLabel5.setText("Manufacturer");
+        manufacturerLabel.setText("Manufacturer");
 
-        jLabel6.setText("URL");
+        urlLabel.setText("URL");
 
         idTF.setBackground(new java.awt.Color(153, 153, 255));
         idTF.addActionListener(new java.awt.event.ActionListener() {
@@ -115,33 +115,33 @@ public class ItemForm extends javax.swing.JFrame {
             }
         });
 
-        submitBtn.setBackground(new java.awt.Color(153, 102, 255));
-        submitBtn.setLabel("Submit");
-        submitBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+        submitButton.setBackground(new java.awt.Color(153, 102, 255));
+        submitButton.setLabel("Submit");
+        submitButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                submitBtnMouseClicked(evt);
+                submitButtonMouseClicked(evt);
             }
         });
-        submitBtn.addActionListener(new java.awt.event.ActionListener() {
+        submitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitBtnActionPerformed(evt);
+                submitButtonActionPerformed(evt);
             }
         });
 
-        updateBtn.setBackground(new java.awt.Color(153, 153, 255));
-        updateBtn.setLabel("Update");
-        updateBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+        updateButton.setBackground(new java.awt.Color(153, 153, 255));
+        updateButton.setLabel("Update");
+        updateButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                updateBtnMouseClicked(evt);
+                updateButtonMouseClicked(evt);
             }
         });
-        updateBtn.addActionListener(new java.awt.event.ActionListener() {
+        updateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateBtnActionPerformed(evt);
+                updateButtonActionPerformed(evt);
             }
         });
 
-        jLabel7.setText("Stock");
+        stockLabel.setText("Stock");
 
         numberOfStockTF.setBackground(new java.awt.Color(153, 153, 255));
 
@@ -159,33 +159,33 @@ public class ItemForm extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(updateBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(urlLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(stockLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(updateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addComponent(urlTF, javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(numberOfStockTF, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(submitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(submitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(manufacturerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(manufacturerTF, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(descriptionLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(descriptionTF, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(titleTF, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(barcodeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(barcodeTF, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(idLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(idTF, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -200,36 +200,36 @@ public class ItemForm extends javax.swing.JFrame {
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(idLabel)
                     .addComponent(idTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(barcodeLabel)
                     .addComponent(barcodeTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
+                    .addComponent(titleLabel)
                     .addComponent(titleTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
+                    .addComponent(descriptionLabel)
                     .addComponent(descriptionTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
+                    .addComponent(manufacturerLabel)
                     .addComponent(manufacturerTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
+                    .addComponent(urlLabel)
                     .addComponent(urlTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
+                    .addComponent(stockLabel)
                     .addComponent(numberOfStockTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(updateBtn)
-                    .addComponent(submitBtn))
+                    .addComponent(updateButton)
+                    .addComponent(submitButton))
                 .addGap(23, 23, 23))
         );
 
@@ -271,7 +271,7 @@ public class ItemForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_urlTFActionPerformed
 
-    private void submitBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_submitBtnMouseClicked
+    private void submitButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_submitButtonMouseClicked
         System.out.println("sdjasabfiusdfisud :_" + idTF.getText()+"_");
         if(idTF.getText().equals("") || barcodeTF.getText().equals("") || descriptionTF.getText().equals("") ||
             manufacturerTF.getText().equals("") || titleTF.getText().equals("") || urlTF.getText().equals("") ||numberOfStockTF.getText().equals("") ){
@@ -287,19 +287,19 @@ public class ItemForm extends javax.swing.JFrame {
         titleTF.setText("");
         urlTF.setText("");
         numberOfStockTF.setText("");
-    }//GEN-LAST:event_submitBtnMouseClicked
+    }//GEN-LAST:event_submitButtonMouseClicked
 
-    private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
+    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_submitBtnActionPerformed
+    }//GEN-LAST:event_submitButtonActionPerformed
 
-    private void updateBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateBtnMouseClicked
+    private void updateButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateButtonMouseClicked
         itemCtl.update(idTF.getText(),barcodeTF.getText(), descriptionTF.getText(), manufacturerTF.getText(), titleTF.getText(), urlTF.getText(), Integer.parseInt(numberOfStockTF.getText()));
-    }//GEN-LAST:event_updateBtnMouseClicked
+    }//GEN-LAST:event_updateButtonMouseClicked
 
-    private void updateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtnActionPerformed
+    private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_updateBtnActionPerformed
+    }//GEN-LAST:event_updateButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -328,23 +328,23 @@ public class ItemForm extends javax.swing.JFrame {
     private DialogBox1 dialogBox;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel barcodeLabel;
     private javax.swing.JTextField barcodeTF;
+    private javax.swing.JLabel descriptionLabel;
     private javax.swing.JTextField descriptionTF;
+    private javax.swing.JLabel idLabel;
     private javax.swing.JTextField idTF;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel manufacturerLabel;
     private javax.swing.JTextField manufacturerTF;
     private javax.swing.JTextField numberOfStockTF;
-    private javax.swing.JButton submitBtn;
+    private javax.swing.JLabel stockLabel;
+    private javax.swing.JButton submitButton;
+    private javax.swing.JLabel titleLabel;
     private javax.swing.JTextField titleTF;
-    private javax.swing.JButton updateBtn;
+    private javax.swing.JButton updateButton;
+    private javax.swing.JLabel urlLabel;
     private javax.swing.JTextField urlTF;
     // End of variables declaration//GEN-END:variables
 }

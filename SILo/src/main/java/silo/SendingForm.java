@@ -32,19 +32,19 @@ public class SendingForm extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        sendBtn = new javax.swing.JButton();
+        sendButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        invoiceNumberLbl = new javax.swing.JLabel();
-        deliveryNoteNumberLbl = new javax.swing.JLabel();
-        orderDateLbl = new javax.swing.JLabel();
-        deliveryDateLbl = new javax.swing.JLabel();
-        statusLbl = new javax.swing.JLabel();
-        customerNameLbl = new javax.swing.JLabel();
+        invoiceNumberLabel = new javax.swing.JLabel();
+        deliveryNoteNumberLabel = new javax.swing.JLabel();
+        orderDateLabel = new javax.swing.JLabel();
+        deliveryDateLabel = new javax.swing.JLabel();
+        statusLabel = new javax.swing.JLabel();
+        customerNameLabel = new javax.swing.JLabel();
         emailTF = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
 
@@ -54,11 +54,11 @@ public class SendingForm extends javax.swing.JFrame {
 
         jLabel1.setText("Sistem Informasi Logistik");
 
-        sendBtn.setBackground(new java.awt.Color(255, 204, 153));
-        sendBtn.setText("Send");
-        sendBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+        sendButton.setBackground(new java.awt.Color(255, 204, 153));
+        sendButton.setText("Send");
+        sendButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                sendBtnMouseClicked(evt);
+                sendButtonMouseClicked(evt);
             }
         });
 
@@ -74,17 +74,17 @@ public class SendingForm extends javax.swing.JFrame {
 
         jLabel7.setText("Customer Email  Address :");
 
-        invoiceNumberLbl.setText("1");
+        invoiceNumberLabel.setText("1");
 
-        deliveryNoteNumberLbl.setText("1");
+        deliveryNoteNumberLabel.setText("1");
 
-        orderDateLbl.setText("1");
+        orderDateLabel.setText("1");
 
-        deliveryDateLbl.setText("1");
+        deliveryDateLabel.setText("1");
 
-        statusLbl.setText("1");
+        statusLabel.setText("1");
 
-        customerNameLbl.setText("1");
+        customerNameLabel.setText("1");
 
         emailTF.setBackground(new java.awt.Color(255, 153, 204));
         emailTF.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +107,7 @@ public class SendingForm extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(sendBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sendButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,12 +119,12 @@ public class SendingForm extends javax.swing.JFrame {
                                     .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING))
                                 .addGap(39, 39, 39)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(invoiceNumberLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(deliveryNoteNumberLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(orderDateLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(statusLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(deliveryDateLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(customerNameLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(invoiceNumberLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(deliveryNoteNumberLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(orderDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(statusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(deliveryDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(customerNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(emailTF, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
@@ -150,25 +150,24 @@ public class SendingForm extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel7))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(invoiceNumberLbl)
+                        .addComponent(invoiceNumberLabel)
                         .addGap(18, 18, 18)
-                        .addComponent(deliveryNoteNumberLbl)
+                        .addComponent(deliveryNoteNumberLabel)
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(customerNameLbl)
+                                .addComponent(customerNameLabel)
                                 .addGap(18, 18, 18)
-                                .addComponent(orderDateLbl)
-                                .addGap(64, 64, 64))
+                                .addComponent(orderDateLabel))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(64, 64, 64)
-                                .addComponent(deliveryDateLbl)
+                                .addComponent(deliveryDateLabel)
                                 .addGap(18, 18, 18)
-                                .addComponent(statusLbl)))
+                                .addComponent(statusLabel)))
                         .addGap(18, 18, 18)
                         .addComponent(emailTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addComponent(sendBtn)
+                .addComponent(sendButton)
                 .addContainerGap())
         );
 
@@ -186,12 +185,12 @@ public class SendingForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void sendBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sendBtnMouseClicked
+    private void sendButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sendButtonMouseClicked
    
         Alert1 alert = new Alert1(3);
         alert.setVisible(true);
         deliveryNoteDetailPage.sendSoftCopyDone();
-    }//GEN-LAST:event_sendBtnMouseClicked
+    }//GEN-LAST:event_sendButtonMouseClicked
 
     private void emailTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTFActionPerformed
         // TODO add your handling code here:
@@ -202,22 +201,22 @@ public class SendingForm extends javax.swing.JFrame {
      */
   public void setSendingForm( String invoiceNumber, String deliveryNoteNumber, String customerName,
         String orderDate, String deliveryDate, String status){
-        invoiceNumberLbl.setText(invoiceNumber);
-        deliveryDateLbl.setText(deliveryNoteNumber);
-        customerNameLbl.setText(customerName);
-        orderDateLbl.setText(orderDate);
-        deliveryDateLbl.setText(deliveryDate);
-        statusLbl.setText(status);
+        invoiceNumberLabel.setText(invoiceNumber);
+        deliveryDateLabel.setText(deliveryNoteNumber);
+        customerNameLabel.setText(customerName);
+        orderDateLabel.setText(orderDate);
+        deliveryDateLabel.setText(deliveryDate);
+        statusLabel.setText(status);
     }
     
     private DeliveryNoteDetailPage deliveryNoteDetailPage;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel customerNameLbl;
-    private javax.swing.JLabel deliveryDateLbl;
-    private javax.swing.JLabel deliveryNoteNumberLbl;
+    private javax.swing.JLabel customerNameLabel;
+    private javax.swing.JLabel deliveryDateLabel;
+    private javax.swing.JLabel deliveryNoteNumberLabel;
     private javax.swing.JTextField emailTF;
-    private javax.swing.JLabel invoiceNumberLbl;
+    private javax.swing.JLabel invoiceNumberLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -227,8 +226,8 @@ public class SendingForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel orderDateLbl;
-    private javax.swing.JButton sendBtn;
-    private javax.swing.JLabel statusLbl;
+    private javax.swing.JLabel orderDateLabel;
+    private javax.swing.JButton sendButton;
+    private javax.swing.JLabel statusLabel;
     // End of variables declaration//GEN-END:variables
 }

@@ -156,14 +156,14 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="addBtn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="searchItemBtn" min="-2" max="-2" attributes="0"/>
+                              <Component id="searchItemButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="searchItemTF" min="-2" pref="241" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jScrollPane1" min="-2" pref="502" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="btnHolder" min="-2" max="-2" attributes="0"/>
+                              <Component id="buttonHolder" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -177,13 +177,13 @@
                       <EmptySpace pref="19" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="searchItemTF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="searchItemBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="searchItemButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="addBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jScrollPane1" min="-2" pref="111" max="-2" attributes="0"/>
-                          <Component id="btnHolder" min="-2" max="-2" attributes="0"/>
+                          <Component id="buttonHolder" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                   </Group>
@@ -243,7 +243,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchItemTFActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="searchItemBtn">
+            <Component class="javax.swing.JButton" name="searchItemButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="ff" type="rgb"/>
@@ -251,18 +251,18 @@
                 <Property name="text" type="java.lang.String" value="Search Item"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="searchItemBtnMouseClicked"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchItemBtnActionPerformed"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="searchItemButtonMouseClicked"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchItemButtonActionPerformed"/>
               </Events>
             </Component>
-            <Container class="javax.swing.JPanel" name="btnHolder">
+            <Container class="javax.swing.JPanel" name="buttonHolder">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cc" green="cc" red="ff" type="rgb"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnHolderMouseClicked"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="buttonHolderMouseClicked"/>
               </Events>
 
               <Layout>
@@ -292,7 +292,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="searchInvoiceBtn" min="-2" max="-2" attributes="0"/>
+                      <Component id="searchInvoiceButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="searchInvoiceTF" min="-2" pref="244" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -301,7 +301,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" pref="484" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="invoiceViewBtnHolder" min="-2" max="-2" attributes="0"/>
+                      <Component id="invoiceViewButtonHolder" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -312,12 +312,12 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="searchInvoiceTF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="searchInvoiceBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="searchInvoiceButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jScrollPane2" min="-2" pref="111" max="-2" attributes="0"/>
-                          <Component id="invoiceViewBtnHolder" min="-2" max="-2" attributes="0"/>
+                          <Component id="invoiceViewButtonHolder" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="40" max="32767" attributes="0"/>
                   </Group>
@@ -364,7 +364,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchInvoiceTFActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="searchInvoiceBtn">
+            <Component class="javax.swing.JButton" name="searchInvoiceButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="cc" red="cc" type="rgb"/>
@@ -372,10 +372,10 @@
                 <Property name="text" type="java.lang.String" value="Search Invoice"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="searchInvoiceBtnMouseClicked"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="searchInvoiceButtonMouseClicked"/>
               </Events>
             </Component>
-            <Container class="javax.swing.JPanel" name="invoiceViewBtnHolder">
+            <Container class="javax.swing.JPanel" name="invoiceViewButtonHolder">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="cc" red="cc" type="rgb"/>
@@ -411,12 +411,12 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
-                              <Component id="searchDeliveyNoteBtn" min="-2" max="-2" attributes="0"/>
+                              <Component id="searchDeliveyNoteButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="searchDeliveryNoteTF" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="viewDeliveryNoteBtn" min="-2" max="-2" attributes="0"/>
+                              <Component id="viewDeliveryNoteButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -430,7 +430,7 @@
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace pref="444" max="32767" attributes="0"/>
-                          <Component id="dnEditBtnHolder" min="-2" max="-2" attributes="0"/>
+                          <Component id="dnEditButtonHolder" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -442,17 +442,17 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="searchDeliveryNoteTF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="searchDeliveyNoteBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="searchDeliveyNoteButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="23" max="32767" attributes="0"/>
+                      <EmptySpace pref="31" max="32767" attributes="0"/>
                       <Component id="jScrollPane3" min="-2" pref="103" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="viewDeliveryNoteBtn" min="-2" max="-2" attributes="0"/>
+                      <Component id="viewDeliveryNoteButton" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace pref="76" max="32767" attributes="0"/>
-                          <Component id="dnEditBtnHolder" min="-2" max="-2" attributes="0"/>
+                          <Component id="dnEditButtonHolder" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="46" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -499,7 +499,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchDeliveryNoteTFActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="searchDeliveyNoteBtn">
+            <Component class="javax.swing.JButton" name="searchDeliveyNoteButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="0" type="rgb"/>
@@ -507,10 +507,10 @@
                 <Property name="text" type="java.lang.String" value="Search Delivery Note"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="searchDeliveyNoteBtnMouseClicked"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="searchDeliveyNoteButtonMouseClicked"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="viewDeliveryNoteBtn">
+            <Component class="javax.swing.JButton" name="viewDeliveryNoteButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="0" type="rgb"/>
@@ -518,7 +518,7 @@
                 <Property name="text" type="java.lang.String" value="View"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="dnEditBtnHolder">
+            <Container class="javax.swing.JPanel" name="dnEditButtonHolder">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="0" type="rgb"/>

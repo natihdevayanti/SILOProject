@@ -33,12 +33,12 @@ public class DeliveryNoteForm extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        invoiceNumberLabel = new javax.swing.JLabel();
+        deliveryNoteNumLabel = new javax.swing.JLabel();
+        customerNameLabel = new javax.swing.JLabel();
+        orderDateLabel = new javax.swing.JLabel();
+        deliveryDateLabel = new javax.swing.JLabel();
+        statusLabel = new javax.swing.JLabel();
         invoiceNumberTF = new javax.swing.JTextField();
         deliveryNoteNumberTF = new javax.swing.JTextField();
         customerNameTF = new javax.swing.JTextField();
@@ -52,17 +52,17 @@ public class DeliveryNoteForm extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 51));
 
-        jLabel1.setText("Invoice Number");
+        invoiceNumberLabel.setText("Invoice Number");
 
-        jLabel2.setText("Delivery Note Number");
+        deliveryNoteNumLabel.setText("Delivery Note Number");
 
-        jLabel3.setText("Customer Name");
+        customerNameLabel.setText("Customer Name");
 
-        jLabel4.setText("Order Date");
+        orderDateLabel.setText("Order Date");
 
-        jLabel5.setText("Delivery Date");
+        deliveryDateLabel.setText("Delivery Date");
 
-        jLabel6.setText("Status ");
+        statusLabel.setText("Status ");
 
         invoiceNumberTF.setBackground(new java.awt.Color(255, 204, 153));
 
@@ -94,12 +94,12 @@ public class DeliveryNoteForm extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(62, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6))
+                    .addComponent(invoiceNumberLabel)
+                    .addComponent(deliveryNoteNumLabel)
+                    .addComponent(customerNameLabel)
+                    .addComponent(orderDateLabel)
+                    .addComponent(deliveryDateLabel)
+                    .addComponent(statusLabel))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(invoiceNumberTF)
@@ -126,27 +126,27 @@ public class DeliveryNoteForm extends javax.swing.JFrame {
                 .addComponent(jLabel8)
                 .addGap(57, 57, 57)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(invoiceNumberLabel)
                     .addComponent(invoiceNumberTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(deliveryNoteNumberTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(deliveryNoteNumLabel, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
+                    .addComponent(customerNameLabel)
                     .addComponent(customerNameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
+                    .addComponent(orderDateLabel)
                     .addComponent(orderDateTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
+                    .addComponent(deliveryDateLabel)
                     .addComponent(deliveryDateTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
+                    .addComponent(statusLabel)
                     .addComponent(statusTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(createButton)
@@ -199,19 +199,19 @@ public class DeliveryNoteForm extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton createButton;
+    private javax.swing.JLabel customerNameLabel;
     private javax.swing.JTextField customerNameTF;
+    private javax.swing.JLabel deliveryDateLabel;
     private javax.swing.JTextField deliveryDateTF;
+    private javax.swing.JLabel deliveryNoteNumLabel;
     private javax.swing.JTextField deliveryNoteNumberTF;
+    private javax.swing.JLabel invoiceNumberLabel;
     private javax.swing.JTextField invoiceNumberTF;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel orderDateLabel;
     private javax.swing.JTextField orderDateTF;
+    private javax.swing.JLabel statusLabel;
     private javax.swing.JTextField statusTF;
     // End of variables declaration//GEN-END:variables
 }

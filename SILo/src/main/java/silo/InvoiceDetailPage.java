@@ -33,44 +33,44 @@ public class InvoiceDetailPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        acceptBtn = new javax.swing.JButton();
-        pendingBtn = new javax.swing.JButton();
+        acceptButton = new javax.swing.JButton();
+        pendingButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        invoiceNumberLbl = new javax.swing.JLabel();
-        poNumberLbl = new javax.swing.JLabel();
-        supplierNameLbl = new javax.swing.JLabel();
-        invoiceOrderDateLbl = new javax.swing.JLabel();
-        invoiceDeliveryDateLbl = new javax.swing.JLabel();
-        invoiceStatusLbl = new javax.swing.JLabel();
+        invoiceNumberLabel = new javax.swing.JLabel();
+        poNumberLabel = new javax.swing.JLabel();
+        supplierNameLabel = new javax.swing.JLabel();
+        invoiceOrderDateLabel = new javax.swing.JLabel();
+        invoiceDeliveryDateLabel = new javax.swing.JLabel();
+        invoiceStatusLabel = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
-        acceptBtn.setBackground(new java.awt.Color(153, 153, 255));
-        acceptBtn.setText("Accept");
-        acceptBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+        acceptButton.setBackground(new java.awt.Color(153, 153, 255));
+        acceptButton.setText("Accept");
+        acceptButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                acceptBtnMouseClicked(evt);
+                acceptButtonMouseClicked(evt);
             }
         });
 
-        pendingBtn.setBackground(new java.awt.Color(153, 153, 255));
-        pendingBtn.setText("Pending");
-        pendingBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+        pendingButton.setBackground(new java.awt.Color(153, 153, 255));
+        pendingButton.setText("Pending");
+        pendingButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pendingBtnMouseClicked(evt);
+                pendingButtonMouseClicked(evt);
             }
         });
-        pendingBtn.addActionListener(new java.awt.event.ActionListener() {
+        pendingButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pendingBtnActionPerformed(evt);
+                pendingButtonActionPerformed(evt);
             }
         });
 
@@ -86,17 +86,17 @@ public class InvoiceDetailPage extends javax.swing.JFrame {
 
         jLabel6.setText("Status :");
 
-        invoiceNumberLbl.setText("jLabel7");
+        invoiceNumberLabel.setText("jLabel7");
 
-        poNumberLbl.setText("jLabel7");
+        poNumberLabel.setText("jLabel7");
 
-        supplierNameLbl.setText("jLabel7");
+        supplierNameLabel.setText("jLabel7");
 
-        invoiceOrderDateLbl.setText("jLabel7");
+        invoiceOrderDateLabel.setText("jLabel7");
 
-        invoiceDeliveryDateLbl.setText("jLabel7");
+        invoiceDeliveryDateLabel.setText("jLabel7");
 
-        invoiceStatusLbl.setText("jLabel7");
+        invoiceStatusLabel.setText("jLabel7");
 
         jLabel8.setFont(new java.awt.Font("Nunito", 0, 18)); // NOI18N
         jLabel8.setText("SISTEM INFORMASI LOGISTIK");
@@ -117,17 +117,17 @@ public class InvoiceDetailPage extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(invoiceStatusLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(invoiceDeliveryDateLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(invoiceOrderDateLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(supplierNameLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(poNumberLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(invoiceNumberLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(invoiceStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(invoiceDeliveryDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(invoiceOrderDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(supplierNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(poNumberLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(invoiceNumberLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(94, 94, 94))
                         .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(pendingBtn)
+                            .addComponent(pendingButton)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(acceptBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(acceptButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(153, 153, 153)))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(102, 102, 102)
@@ -142,31 +142,31 @@ public class InvoiceDetailPage extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(invoiceNumberLbl))
+                    .addComponent(invoiceNumberLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(poNumberLbl))
+                    .addComponent(poNumberLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(supplierNameLbl))
+                    .addComponent(supplierNameLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(invoiceOrderDateLbl))
+                    .addComponent(invoiceOrderDateLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(invoiceDeliveryDateLbl))
+                    .addComponent(invoiceDeliveryDateLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(invoiceStatusLbl))
+                    .addComponent(invoiceStatusLabel))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(acceptBtn)
-                    .addComponent(pendingBtn))
+                    .addComponent(acceptButton)
+                    .addComponent(pendingButton))
                 .addGap(22, 22, 22))
         );
 
@@ -184,17 +184,17 @@ public class InvoiceDetailPage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void acceptBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_acceptBtnMouseClicked
-        invoiceCtl.requestChangeStatus("completed", invoiceNumberLbl.getText());
-    }//GEN-LAST:event_acceptBtnMouseClicked
+    private void acceptButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_acceptButtonMouseClicked
+        invoiceCtl.requestChangeStatus("completed", invoiceNumberLabel.getText());
+    }//GEN-LAST:event_acceptButtonMouseClicked
 
-    private void pendingBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pendingBtnMouseClicked
-        invoiceCtl.requestChangeStatus("pending", invoiceNumberLbl.getText());
-    }//GEN-LAST:event_pendingBtnMouseClicked
+    private void pendingButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pendingButtonMouseClicked
+        invoiceCtl.requestChangeStatus("pending", invoiceNumberLabel.getText());
+    }//GEN-LAST:event_pendingButtonMouseClicked
 
-    private void pendingBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pendingBtnActionPerformed
+    private void pendingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pendingButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_pendingBtnActionPerformed
+    }//GEN-LAST:event_pendingButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,12 +202,12 @@ public class InvoiceDetailPage extends javax.swing.JFrame {
 
     
     public void setCurrentInvoice(Invoice invoice){
-        invoiceNumberLbl.setText(String.valueOf(invoice.getInvoiceNumber()));
-        poNumberLbl.setText(String.valueOf(invoice.getPONumber()));
-        supplierNameLbl.setText(invoice.getSupplierName());
-        invoiceOrderDateLbl.setText(invoice.getOrderDateString());
-        invoiceDeliveryDateLbl.setText(invoice.getDeliveryDateString());
-        invoiceStatusLbl.setText(invoice.getStatus());
+        invoiceNumberLabel.setText(String.valueOf(invoice.getInvoiceNumber()));
+        poNumberLabel.setText(String.valueOf(invoice.getPONumber()));
+        supplierNameLabel.setText(invoice.getSupplierName());
+        invoiceOrderDateLabel.setText(invoice.getOrderDateString());
+        invoiceDeliveryDateLabel.setText(invoice.getDeliveryDateString());
+        invoiceStatusLabel.setText(invoice.getStatus());
     }
     
     public void setController(InvoiceCtl invoiceCtl){
@@ -215,11 +215,11 @@ public class InvoiceDetailPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton acceptBtn;
-    private javax.swing.JLabel invoiceDeliveryDateLbl;
-    private javax.swing.JLabel invoiceNumberLbl;
-    private javax.swing.JLabel invoiceOrderDateLbl;
-    private javax.swing.JLabel invoiceStatusLbl;
+    private javax.swing.JButton acceptButton;
+    private javax.swing.JLabel invoiceDeliveryDateLabel;
+    private javax.swing.JLabel invoiceNumberLabel;
+    private javax.swing.JLabel invoiceOrderDateLabel;
+    private javax.swing.JLabel invoiceStatusLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -228,8 +228,8 @@ public class InvoiceDetailPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton pendingBtn;
-    private javax.swing.JLabel poNumberLbl;
-    private javax.swing.JLabel supplierNameLbl;
+    private javax.swing.JButton pendingButton;
+    private javax.swing.JLabel poNumberLabel;
+    private javax.swing.JLabel supplierNameLabel;
     // End of variables declaration//GEN-END:variables
 }
